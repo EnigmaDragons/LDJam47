@@ -41,9 +41,9 @@ First 8 Hours - Blitz to create the skeleton game, playable from Main Menu to Vi
 First Main Jam Phase - Add content and mechanics. QA Testers work on finding bugs. Designers work on making the game fun.
 Jam Midpoint - Team Syncs to review current full game and creates a shared vision for Content Complete Milestone
 Second Main Jam Phase - Finish up key content, mechanics and game feel.
-Final 6 Hours - Polish the game. Everyone plays through the game. Tune visuals. Fix bugs. 
+Final 6 Hours - Polish the game. Everyone plays through the game. Tune visuals. Fix bugs.
 2hr before Jam End - Create Game Page, Gameplay Video, Sizzle Trailer, etc.
-Final Hour - Test Final Build and Submit once approved. 
+Final Hour - Test Final Build and Submit once approved.
 After Jam - Team Retrospective in Voice Chat. Talk about what went well, what didn't go well, and how we can improve.
 
 ----
@@ -52,6 +52,6 @@ After Jam - Team Retrospective in Voice Chat. Talk about what went well, what di
 
 1st - Game Skeleton Complete
 2nd - Core Gameplay Loop Complete
-3rd - Initial Content 
+3rd - Initial Content
 4th - Content Complete
 5th - Polished and Finalized
