@@ -28,3 +28,4 @@ Setup:
 ### Team
 
 - Composer - Silas Reinagel
+- Sound Design - Michael Elkan
