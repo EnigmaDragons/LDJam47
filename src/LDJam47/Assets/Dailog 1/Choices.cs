@@ -5,12 +5,15 @@ using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
+using UnityEditor;
+using System.Collections;
 
 public class Choices : MonoBehaviour
 {
     [Header("       Settings")]
     [Header("               Choice Opperations")]
-    private TextMeshProUGUI dailog;
+    public float typeSpeed;
+    [HideInInspector]public TextMeshProUGUI dailog;
 
     private TextMeshProUGUI choice1;
     private Button choice1Button;
@@ -29,12 +32,17 @@ public class Choices : MonoBehaviour
 
     public ChoiceHolder choiceHold;
 
+
     //Used for setting up things
     private string[] tempArray;
     private List<string> tempChoice;
 
     [HideInInspector]public List<int> pointerList;
     public int pointer = 1;
+
+
+    List<TextMeshProUGUI> textList;
+    List<Button> buttonList;
 
     void Start()
     {
@@ -59,6 +67,10 @@ public class Choices : MonoBehaviour
 
         choiceHold = GameObject.Find("Choicelist").GetComponent<ChoiceHolder>();
 
+
+        textList = new List<TextMeshProUGUI> { choice1, choice2, choice3, choice4, choice5 };
+        buttonList = new List<Button> { choice1Button, choice2Button, choice3Button, choice4Button, choice5Button };
+
         GrabText();
     }
 
@@ -69,8 +81,15 @@ public class Choices : MonoBehaviour
     }
     public void GrabText()
     {
-        //choiceHold.choiceSets[pointer-1].Replace(" ,", "ComA");
-        tempArray = choiceHold.choiceSets[pointer-1].Split(',');
+        int count = 0;
+        foreach (Button item in buttonList)
+        {
+            textList[count].text = "";
+            item.interactable = false;
+            count++;
+        }
+            //choiceHold.choiceSets[pointer-1].Replace(" ,", "ComA");
+            tempArray = choiceHold.choiceSets[pointer-1].Split(',');
         pointerList = new List<int>();
 
         // gets next link in convo chain
@@ -85,30 +104,25 @@ public class Choices : MonoBehaviour
         tempChoice = tempArray.ToList();
         while (tempChoice.Count <= 5)
         {
-            tempChoice.Add("...#");
+            tempChoice.Add("#");
         }
-        SetUi(tempChoice);
+        StartCoroutine(DailogScroll());
     }
     public void SetUi(List<string> displayChoices)
     {
         tempChoice = displayChoices;
-        dailog.text = tempChoice[0].Replace("ComA", " ,");
+
         choice1.SetText(tempChoice[1].Split('#')[0].Replace("ComA", " ,"));
         choice2.SetText(tempChoice[2].Split('#')[0].Replace("ComA", " ,"));
         choice3.SetText(tempChoice[3].Split('#')[0].Replace("ComA", " ,"));
         choice4.SetText(tempChoice[4].Split('#')[0].Replace("ComA", " ,"));
         choice5.SetText(tempChoice[5].Split('#')[0].Replace("ComA", " ,"));
 
-
-        // DISABLES CERTIAN BUTTONS
-        List<TextMeshProUGUI> textList = new List<TextMeshProUGUI> { choice1, choice2, choice3, choice4, choice5 };
-        List<Button> buttonList = new List<Button> { choice1Button, choice2Button, choice3Button, choice4Button, choice5Button };
-
         int i = 0;
         foreach (Button item in buttonList)
         {
 
-            if (textList[i].text == "...")
+            if (textList[i].text == "")
             {
                 item.interactable = false;
             }
@@ -118,5 +132,17 @@ public class Choices : MonoBehaviour
             }
             i++;
         }
+    }
+    IEnumerator DailogScroll()
+    {
+        dailog.text = "";
+        foreach (char item in tempChoice[0].Replace("ComA", " ,"))
+        {
+            dailog.text += item;
+            yield return new WaitForSeconds(typeSpeed);
+        }
+
+        // DISABLES CERTIAN BUTTONS
+        SetUi(tempChoice);
     }
 }
