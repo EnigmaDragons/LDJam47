@@ -117,7 +117,10 @@ public class Choices : MonoBehaviour
             tempChoice.Add("#");
         }
         // used for printer dailog to screen
-        StartCoroutine(DailogScroll());
+        if (gameObject.activeInHierarchy == true)
+        {
+            StartCoroutine(DailogScroll());
+        }
     }
     public void SetUi(List<string> displayChoices)
     {

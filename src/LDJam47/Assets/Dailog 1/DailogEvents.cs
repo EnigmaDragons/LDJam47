@@ -27,7 +27,7 @@ public class DailogEvents : MonoBehaviour
         if(pointer == 2)
         {
             Debug.Log("Game over");
-            overview.transform.position = new Vector2(100, 100);
+            gameObject.SetActive(false);
 
             // bus-kun 
         }
