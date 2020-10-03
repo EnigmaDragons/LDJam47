@@ -15,7 +15,7 @@ MonoBehaviour:
   volume: 1
   pitch: 1
   audioClip: {fileID: 8300000, guid: a6c838342f8070948949b4dd54fc45bd, type: 3}
-  introBoundary: 0
-  loopingBoundary: 0
+  introBoundary: 17.807
+  loopingBoundary: 88.962
   nonLooping: 0
-  loopWholeAudio: 1
+  loopWholeAudio: 0
