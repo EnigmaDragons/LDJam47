@@ -822,6 +822,14 @@ PrefabInstance:
       propertyPath: pointer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 617558355948166030, guid: 39678f9288fe9ed4894c482114398b89, type: 3}
+      propertyPath: playerName
+      value: George
+      objectReference: {fileID: 0}
+    - target: {fileID: 617558355948166030, guid: 39678f9288fe9ed4894c482114398b89, type: 3}
+      propertyPath: dateName
+      value: Rhys
+      objectReference: {fileID: 0}
     - target: {fileID: 617558356057026766, guid: 39678f9288fe9ed4894c482114398b89, type: 3}
       propertyPath: m_fontSize
       value: 29.65

@@ -13,6 +13,8 @@ public class Choices : MonoBehaviour
     [Header("       Settings")]
     [Header("               Choice Opperations")]
     // will detrimin how fast your date talks.
+    public string playerName;
+    public string dateName;
     public float typeSpeed;
     [HideInInspector]public TextMeshProUGUI dailog;
 
@@ -100,7 +102,6 @@ public class Choices : MonoBehaviour
         }
 
         //replaces normal english commas with that
-        choiceHold.choiceSets[pointer - 1].Replace(" ,", "ComA");
         tempArray = choiceHold.choiceSets[pointer - 1].Split('=');
         pointerList = new List<int>();
 
@@ -156,7 +157,7 @@ public class Choices : MonoBehaviour
         // reests dialog
         dailog.text = "";
         // fancy smancy text crawl;
-        foreach (char item in tempChoice[0].Replace("ComA", " ,"))
+        foreach (char item in tempChoice[0].Replace("PLAYER_NAME", playerName).Replace("Player", playerName).Replace("DATE", dateName))
         {
             dailog.text += item;
             yield return new WaitForSeconds(typeSpeed);
