@@ -69,7 +69,7 @@ namespace SpeedTutorMainMenuSystem
         public IEnumerator ConfirmationBox()
         {
             confirmationMenu.SetActive(true);
-            yield return new WaitForSeconds(2);
+            yield return StartCoroutine(WaitForRealSeconds(2));
             confirmationMenu.SetActive(false);
         }
 
@@ -312,15 +312,36 @@ namespace SpeedTutorMainMenuSystem
 
         public void GoBackToMainMenu()
         {
-            menuDefaultCanvas.SetActive(true);
-            newGameDialog.SetActive(false);
-            loadGameDialog.SetActive(false);
-            noSaveDialog.SetActive(false);
+	        if (menuDefaultCanvas != null)
+	        {
+		        menuDefaultCanvas.SetActive(true);
+	        }
+
+	        if (newGameDialog != null)
+	        {
+		        newGameDialog.SetActive(false);
+	        }
+
+	        if (loadGameDialog != null)
+	        {
+		        loadGameDialog.SetActive(false);
+	        }
+
+	        if (noSaveDialog != null)
+	        {
+		        noSaveDialog.SetActive(false);
+	        }
+
             GeneralSettingsCanvas.SetActive(false);
             graphicsMenu.SetActive(false);
             soundMenu.SetActive(false);
             gameplayMenu.SetActive(false);
-            creditsCanvas.SetActive(false);
+
+            if (creditsCanvas != null)
+            {
+	            creditsCanvas.SetActive(false);
+            }
+
             menuNumber = 1;
         }
 
@@ -341,5 +362,15 @@ namespace SpeedTutorMainMenuSystem
             GoBackToMainMenu();
         }
         #endregion
+
+        public static IEnumerator WaitForRealSeconds(float time)
+        {
+	        float start = Time.realtimeSinceStartup;
+
+	        while (Time.realtimeSinceStartup < start + time)
+	        {
+		        yield return null;
+	        }
+        }
     }
 }
