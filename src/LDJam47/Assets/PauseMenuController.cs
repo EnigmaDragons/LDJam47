@@ -6,24 +6,35 @@ public class PauseMenuController : MonoBehaviour
 	[SerializeField] private GameObject forHiding;
 
     private bool paused = false;
+    private bool isPauseAxisInUse = false;
 
 	void Start()
-    {
-
-    }
+	{
+		forHiding.SetActive(false);
+	}
 
     void Update()
     {
-	    if (Input.GetAxis("Pause") > 0.01)
+	    if (Input.GetAxisRaw("Pause") != 0)
 	    {
-		    if (paused)
+		    if(isPauseAxisInUse == false)
 		    {
-			    UnPause();
+			    isPauseAxisInUse = true;
+
+			    if (paused)
+			    {
+				    UnPause();
+			    }
+			    else
+			    {
+				    Pause();
+			    }
 		    }
-		    else
-		    {
-			    Pause();
-		    }
+	    }
+
+	    if (Input.GetAxisRaw("Pause") == 0)
+	    {
+		    isPauseAxisInUse = false;
 	    }
     }
 
@@ -47,6 +58,8 @@ public class PauseMenuController : MonoBehaviour
 
     public void GoToMainMenu()
     {
+	    Time.timeScale = 1;
+
 	    SceneManager.LoadScene(0);
     }
 }
