@@ -459,14 +459,44 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3655142049628789499, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
-      propertyPath: forHiding
+    - target: {fileID: 4773707972216821333, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773707972216821333, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PauseMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773707972216821333, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773707972216821333, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773707972216821333, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2687088781584141382}
+    - target: {fileID: 4773707972216821333, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GoToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773707972216821333, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
---- !u!1 &2687088781584141382 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 110287485752410194, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
+--- !u!114 &2687088781584141382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3655142049628789499, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
   m_PrefabInstance: {fileID: 2687088781584141381}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9ca7ca97d50c5449157d4039cd4f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
