@@ -816,7 +816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 617558355948166030, guid: 39678f9288fe9ed4894c482114398b89, type: 3}
       propertyPath: typeSpeed
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 617558355948166030, guid: 39678f9288fe9ed4894c482114398b89, type: 3}
       propertyPath: pointer

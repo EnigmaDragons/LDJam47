@@ -81,7 +81,10 @@ public class Choices : MonoBehaviour
     public void NextConvo()
     {
         // Find next pointer from button daialog and will bring the player there
-        pointer = pointerList[(Int32.Parse((EventSystem.current.currentSelectedGameObject.name).Replace("Choice", ""))-1)];
+        if (EventSystem.current.currentSelectedGameObject != null)
+        {
+            pointer = pointerList[(Int32.Parse((EventSystem.current.currentSelectedGameObject.name).Replace("Choice", "")) - 1)];
+        }
         //runs grabtext again to keep the game going.
         dailogE.NextEvent(pointer);
     }
