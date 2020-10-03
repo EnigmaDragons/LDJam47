@@ -27,6 +27,7 @@ namespace SpeedTutorMainMenuSystem
         [Header("Main Menu Components")]
         [SerializeField] private GameObject menuDefaultCanvas;
         [SerializeField] private GameObject GeneralSettingsCanvas;
+        [SerializeField] private GameObject creditsCanvas;
         [SerializeField] private GameObject graphicsMenu;
         [SerializeField] private GameObject soundMenu;
         [SerializeField] private GameObject gameplayMenu;
@@ -58,6 +59,8 @@ namespace SpeedTutorMainMenuSystem
         #region Initialisation - Button Selection & Menu Order
         private void Start()
         {
+	        GoBackToMainMenu();
+
             menuNumber = 1;
         }
         #endregion
@@ -74,7 +77,7 @@ namespace SpeedTutorMainMenuSystem
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (menuNumber == 2 || menuNumber == 7 || menuNumber == 8)
+                if (menuNumber == 2 || menuNumber == 7 || menuNumber == 8 || menuNumber == 9)
                 {
                     GoBackToMainMenu();
                     ClickSound();
@@ -132,7 +135,7 @@ namespace SpeedTutorMainMenuSystem
 
             if (buttonType == "Exit")
             {
-                Debug.Log("YES QUIT!");
+                Debug.Log("QUIT!");
                 Application.Quit();
             }
 
@@ -141,6 +144,13 @@ namespace SpeedTutorMainMenuSystem
                 menuDefaultCanvas.SetActive(false);
                 GeneralSettingsCanvas.SetActive(true);
                 menuNumber = 2;
+            }
+
+            if (buttonType == "Credits")
+            {
+	            menuDefaultCanvas.SetActive(false);
+	            creditsCanvas.SetActive(true);
+	            menuNumber = 9;
             }
 
             if (buttonType == "LoadGame")
@@ -310,6 +320,7 @@ namespace SpeedTutorMainMenuSystem
             graphicsMenu.SetActive(false);
             soundMenu.SetActive(false);
             gameplayMenu.SetActive(false);
+            creditsCanvas.SetActive(false);
             menuNumber = 1;
         }
 
