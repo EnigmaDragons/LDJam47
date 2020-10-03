@@ -5,12 +5,16 @@ using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
+using UnityEditor;
+using System.Collections;
 
 public class Choices : MonoBehaviour
 {
     [Header("       Settings")]
     [Header("               Choice Opperations")]
-    private TextMeshProUGUI dailog;
+    // will detrimin how fast your date talks.
+    public float typeSpeed;
+    [HideInInspector]public TextMeshProUGUI dailog;
 
     private TextMeshProUGUI choice1;
     private Button choice1Button;
@@ -29,17 +33,24 @@ public class Choices : MonoBehaviour
 
     public ChoiceHolder choiceHold;
 
-    //Used for setting up things
     private string[] tempArray;
     private List<string> tempChoice;
 
+
+    // works with button to bring you to the next dailog
     [HideInInspector]public List<int> pointerList;
-    public int pointer = 1;
+    // pointer will bring you that number dialog so 3 will bring you to the third dialog option
+    public int pointer = 37;
+
+    public DailogEvents dailogE;
+    //used for togglein the aviabilty of choices
+    List<TextMeshProUGUI> textList;
+    List<Button> buttonList;
 
     void Start()
     {
-        pointer = 1;
-        // 1 to 5 options
+        // points to very first conversation
+        //Prep work 
         dailog = GameObject.Find("Dialog").GetComponent<TextMeshProUGUI>();
 
         choice1 = GameObject.Find("Choice1").transform.GetChild(0).GetComponent<TextMeshProUGUI>();
@@ -59,25 +70,45 @@ public class Choices : MonoBehaviour
 
         choiceHold = GameObject.Find("Choicelist").GetComponent<ChoiceHolder>();
 
+        textList = new List<TextMeshProUGUI> { choice1, choice2, choice3, choice4, choice5 };
+        buttonList = new List<Button> { choice1Button, choice2Button, choice3Button, choice4Button, choice5Button };
+
+        dailogE = GameObject.Find("Overview").GetComponent<DailogEvents>();
+        //Begins dailog system
         GrabText();
     }
 
     public void NextConvo()
     {
-        pointer = pointerList[(Int32.Parse((EventSystem.current.currentSelectedGameObject.name).Replace("Choice", ""))-1)];
-        GrabText();
+        // Find next pointer from button daialog and will bring the player there
+        if (EventSystem.current.currentSelectedGameObject != null)
+        {
+            pointer = pointerList[(Int32.Parse((EventSystem.current.currentSelectedGameObject.name).Replace("Choice", "")) - 1)];
+        }
+        //runs grabtext again to keep the game going.
+        dailogE.NextEvent(pointer);
     }
     public void GrabText()
     {
-        //choiceHold.choiceSets[pointer-1].Replace(" ,", "ComA");
-        tempArray = choiceHold.choiceSets[pointer-1].Split(',');
+        // Disables all buttons and makes them blank 
+        int count = 0;
+        foreach (Button item in buttonList)
+        {
+            textList[count].text = "";
+            item.interactable = false;
+            count++;
+        }
+
+        //replaces normal english commas with that
+        choiceHold.choiceSets[pointer - 1].Replace(" ,", "ComA");
+        tempArray = choiceHold.choiceSets[pointer - 1].Split('=');
         pointerList = new List<int>();
 
-        // gets next link in convo chain
-        // start at one to avoid dailog
+        // gets pointer
         int i = 1;
         while (i < tempArray.Length)
         {
+            Debug.Log(tempArray[i]);
             int temp = Int32.Parse(tempArray[i].Split('#')[1]);
             pointerList.Add(temp);
             i++;
@@ -85,30 +116,31 @@ public class Choices : MonoBehaviour
         tempChoice = tempArray.ToList();
         while (tempChoice.Count <= 5)
         {
-            tempChoice.Add("...#");
+            tempChoice.Add("#");
         }
-        SetUi(tempChoice);
+        // used for printer dailog to screen
+        if (gameObject.activeInHierarchy == true)
+        {
+            StartCoroutine(DailogScroll());
+        }
     }
     public void SetUi(List<string> displayChoices)
     {
         tempChoice = displayChoices;
-        dailog.text = tempChoice[0].Replace("ComA", " ,");
+
+        //uses list and sets everything up so it looks nice 
         choice1.SetText(tempChoice[1].Split('#')[0].Replace("ComA", " ,"));
         choice2.SetText(tempChoice[2].Split('#')[0].Replace("ComA", " ,"));
         choice3.SetText(tempChoice[3].Split('#')[0].Replace("ComA", " ,"));
         choice4.SetText(tempChoice[4].Split('#')[0].Replace("ComA", " ,"));
         choice5.SetText(tempChoice[5].Split('#')[0].Replace("ComA", " ,"));
 
-
-        // DISABLES CERTIAN BUTTONS
-        List<TextMeshProUGUI> textList = new List<TextMeshProUGUI> { choice1, choice2, choice3, choice4, choice5 };
-        List<Button> buttonList = new List<Button> { choice1Button, choice2Button, choice3Button, choice4Button, choice5Button };
-
+        // enables relavent buttons
         int i = 0;
         foreach (Button item in buttonList)
         {
 
-            if (textList[i].text == "...")
+            if (textList[i].text == "")
             {
                 item.interactable = false;
             }
@@ -118,5 +150,19 @@ public class Choices : MonoBehaviour
             }
             i++;
         }
+    }
+    IEnumerator DailogScroll()
+    {
+        // reests dialog
+        dailog.text = "";
+        // fancy smancy text crawl;
+        foreach (char item in tempChoice[0].Replace("ComA", " ,"))
+        {
+            dailog.text += item;
+            yield return new WaitForSeconds(typeSpeed);
+        }
+
+        // enables and finishes up ui. 
+        SetUi(tempChoice);
     }
 }
