@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenuController : MonoBehaviour
 {
 	[SerializeField] private GameObject forHiding;
+	[SerializeField] private  GameObject mainPauseMenu;
 
     private bool paused = false;
     private bool isPauseAxisInUse = false;
@@ -40,6 +41,11 @@ public class PauseMenuController : MonoBehaviour
 
     public void UnPause()
     {
+	    if (!mainPauseMenu.activeSelf)
+	    {
+			return;
+	    }
+
 	    forHiding.SetActive(false);
 
 	    Time.timeScale = 1;
