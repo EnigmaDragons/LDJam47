@@ -12,6 +12,7 @@ public class Choices : MonoBehaviour
 {
     [Header("       Settings")]
     [Header("               Choice Opperations")]
+    // will detrimin how fast your date talks.
     public float typeSpeed;
     [HideInInspector]public TextMeshProUGUI dailog;
 
@@ -32,22 +33,25 @@ public class Choices : MonoBehaviour
 
     public ChoiceHolder choiceHold;
 
-
-    //Used for setting up things
     private string[] tempArray;
     private List<string> tempChoice;
 
+
+    // works with button to bring you to the next dailog
     [HideInInspector]public List<int> pointerList;
+    // pointer will bring you that number dialog so 3 will bring you to the third dialog option
     public int pointer = 1;
 
-
+    public DailogEvents dailogE;
+    //used for togglein the aviabilty of choices
     List<TextMeshProUGUI> textList;
     List<Button> buttonList;
 
     void Start()
     {
+        // points to very first conversation
         pointer = 1;
-        // 1 to 5 options
+        //Prep work 
         dailog = GameObject.Find("Dialog").GetComponent<TextMeshProUGUI>();
 
         choice1 = GameObject.Find("Choice1").transform.GetChild(0).GetComponent<TextMeshProUGUI>();
@@ -67,20 +71,25 @@ public class Choices : MonoBehaviour
 
         choiceHold = GameObject.Find("Choicelist").GetComponent<ChoiceHolder>();
 
-
         textList = new List<TextMeshProUGUI> { choice1, choice2, choice3, choice4, choice5 };
         buttonList = new List<Button> { choice1Button, choice2Button, choice3Button, choice4Button, choice5Button };
 
+        dailogE = GameObject.Find("Overview").GetComponent<DailogEvents>();
+        //Begins dailog system
         GrabText();
     }
 
     public void NextConvo()
     {
+        // Find next pointer from button daialog and will bring the player there
         pointer = pointerList[(Int32.Parse((EventSystem.current.currentSelectedGameObject.name).Replace("Choice", ""))-1)];
+        //runs grabtext again to keep the game going.
+        dailogE.NextEvent(pointer);
         GrabText();
     }
     public void GrabText()
     {
+        // Disables all buttons and makes them blank 
         int count = 0;
         foreach (Button item in buttonList)
         {
@@ -88,12 +97,13 @@ public class Choices : MonoBehaviour
             item.interactable = false;
             count++;
         }
-            //choiceHold.choiceSets[pointer-1].Replace(" ,", "ComA");
-            tempArray = choiceHold.choiceSets[pointer-1].Split(',');
+
+        //replaces normal english commas with that
+        choiceHold.choiceSets[pointer-1].Replace(" ,", "ComA");
+        tempArray = choiceHold.choiceSets[pointer-1].Split(',');
         pointerList = new List<int>();
 
-        // gets next link in convo chain
-        // start at one to avoid dailog
+        // gets pointer
         int i = 1;
         while (i < tempArray.Length)
         {
@@ -106,18 +116,21 @@ public class Choices : MonoBehaviour
         {
             tempChoice.Add("#");
         }
+        // used for printer dailog to screen
         StartCoroutine(DailogScroll());
     }
     public void SetUi(List<string> displayChoices)
     {
         tempChoice = displayChoices;
 
+        //uses list and sets everything up so it looks nice 
         choice1.SetText(tempChoice[1].Split('#')[0].Replace("ComA", " ,"));
         choice2.SetText(tempChoice[2].Split('#')[0].Replace("ComA", " ,"));
         choice3.SetText(tempChoice[3].Split('#')[0].Replace("ComA", " ,"));
         choice4.SetText(tempChoice[4].Split('#')[0].Replace("ComA", " ,"));
         choice5.SetText(tempChoice[5].Split('#')[0].Replace("ComA", " ,"));
 
+        // enables relavent buttons
         int i = 0;
         foreach (Button item in buttonList)
         {
@@ -135,14 +148,16 @@ public class Choices : MonoBehaviour
     }
     IEnumerator DailogScroll()
     {
+        // reests dialog
         dailog.text = "";
+        // fancy smancy text crawl;
         foreach (char item in tempChoice[0].Replace("ComA", " ,"))
         {
             dailog.text += item;
             yield return new WaitForSeconds(typeSpeed);
         }
 
-        // DISABLES CERTIAN BUTTONS
+        // enables and finishes up ui. 
         SetUi(tempChoice);
     }
 }
