@@ -459,14 +459,5 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3655142049628789499, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
-      propertyPath: forHiding
-      value: 
-      objectReference: {fileID: 2687088781584141382}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
---- !u!1 &2687088781584141382 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 110287485752410194, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
-  m_PrefabInstance: {fileID: 2687088781584141381}
-  m_PrefabAsset: {fileID: 0}
