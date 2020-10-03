@@ -7,11 +7,12 @@ public class DailogEvents : MonoBehaviour
     private GameObject overview;
     private Vector2 origin;
     public int pointer;
-
+    private Choices choice;
 
     void Start()
     {
         overview = GameObject.Find("Overview");
+        choice = GameObject.Find("ChoiceManager").GetComponent<Choices>();
         origin = overview.transform.position;
         NextEvent(1);
     }
@@ -24,12 +25,16 @@ public class DailogEvents : MonoBehaviour
             Debug.Log("Game started");
             // Have date walk in
         }
-        if(pointer == 2)
+        else if(pointer == 38)
         {
             Debug.Log("Game over");
             gameObject.SetActive(false);
 
             // bus-kun 
+        }
+        else
+        {
+            choice.GrabText();
         }
     }
 }

@@ -40,7 +40,7 @@ public class Choices : MonoBehaviour
     // works with button to bring you to the next dailog
     [HideInInspector]public List<int> pointerList;
     // pointer will bring you that number dialog so 3 will bring you to the third dialog option
-    public int pointer = 1;
+    public int pointer = 37;
 
     public DailogEvents dailogE;
     //used for togglein the aviabilty of choices
@@ -50,7 +50,6 @@ public class Choices : MonoBehaviour
     void Start()
     {
         // points to very first conversation
-        pointer = 1;
         //Prep work 
         dailog = GameObject.Find("Dialog").GetComponent<TextMeshProUGUI>();
 
@@ -85,7 +84,6 @@ public class Choices : MonoBehaviour
         pointer = pointerList[(Int32.Parse((EventSystem.current.currentSelectedGameObject.name).Replace("Choice", ""))-1)];
         //runs grabtext again to keep the game going.
         dailogE.NextEvent(pointer);
-        GrabText();
     }
     public void GrabText()
     {
@@ -99,14 +97,15 @@ public class Choices : MonoBehaviour
         }
 
         //replaces normal english commas with that
-        choiceHold.choiceSets[pointer-1].Replace(" ,", "ComA");
-        tempArray = choiceHold.choiceSets[pointer-1].Split(',');
+        choiceHold.choiceSets[pointer - 1].Replace(" ,", "ComA");
+        tempArray = choiceHold.choiceSets[pointer - 1].Split('=');
         pointerList = new List<int>();
 
         // gets pointer
         int i = 1;
         while (i < tempArray.Length)
         {
+            Debug.Log(tempArray[i]);
             int temp = Int32.Parse(tempArray[i].Split('#')[1]);
             pointerList.Add(temp);
             i++;
