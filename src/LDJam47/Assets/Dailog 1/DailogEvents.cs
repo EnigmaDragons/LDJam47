@@ -25,7 +25,7 @@ public class DailogEvents : MonoBehaviour
             Debug.Log("Game started");
             // Have date walk in
         }
-        else if(pointer == 38)
+        else if(pointer == 37)
         {
             Debug.Log("Game over");
             gameObject.SetActive(false);
