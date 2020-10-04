@@ -22,6 +22,27 @@ public class ChoiceHolder : MonoBehaviour
            "PLAYER_NAME: Geez I’m here for two seconds and you’re already bitching. = next #11",
            "PLAYER_NAME: Hey if I got to wait around in a place like this I wouldn’t be complaining. Lighten up. = next #11",
            "Robin: Yeah... sure… = Don’t be mad. Hey waiter! We’ll take two beers. #12 = It’s Friday baby! Hey waiter! A round of tequila shots! #13 = Drinks? Hey waiter! I’m thinking margs for the table. #14",
+           "PLAYER_NAME: Don’t be mad. Hey waiter! We’ll take two beers. = next #15",
+           "PLAYER_NAME: It’s Friday baby! Hey waiter! A round of tequila shots! = next #15",
+           "PLAYER_NAME: Drinks? Hey waiter! I’m thinking margs for the table. = next #15",
+           "Robin: Actually water is fine for me. = You’re gonna get something a little stronger. My treat. #16 = You’re not gonna make me drink alone are you? Plus I’m paying. #17 = Come on you didn’t come out tonight to drink water? Don’t worry I’ll cover this round. #18",
+           "PLAYER_NAME: You’re gonna get something a little stronger. My treat. = next #19",
+           "PLAYER_NAME: You’re not gonna make me drink alone are you? Plus I’m paying. = next #19",
+           "PLAYER_NAME:  Come on you didn’t come out tonight to drink water? Don’t worry I’ll cover this round. = next #19",
+           "Robin: Ok fine but could I also get some water. = next #20",
+           "Waiter: No problem I’ll be back with your drinks soon. = next #21",
+           "Robin: I really can’t drink too much tonight I have to drive home after. = Oh come on. I’m not saying we should get black out drunk. #22 = Hey, worst case we can get an uber back to my place. #23 = There are literally never cops in this part of town. You’ll be fine. #24 ",
+           "PLAYER_NAME: Oh come on. I’m not saying we should get black out drunk. = next #25",
+           "PLAYER_NAME: Hey, worst case we can get an uber back to my place. = next #25",
+           "PLAYER_NAME: There are literally never cops in this part of town. You’ll be fine. = next #25",
+           "Robin: Right… So... what do you do for a living? = [Panera] #26 = [Motocross] #27 = [Jewelry] #28",
+           "PLAYER_NAME: Well I used to be chef at the Panera until my ex got me fired. After each shift they would just throw away the extra bagels. Once I found out I volunteered to do it and just stashed the extras. I thought they would be happy for the free food. How about you? = next #29",
+           "PLAYER_NAME: I had this gig managing a motocross park during the week but my ex got pissed and told the manager about the parties I was throwing there so now on Monday I gotta go in an apologize and shit. How about you? = next #29",
+           "PLAYER_NAME: My ex used to make these jewelry things and I was helping her sell them online before we broke up. But I still have access to the paypal which is nice. How about you? = next #29",
+           "Robin: Oh I’m an agent at Compass Realty Group."
+
+
+
 
 
 
