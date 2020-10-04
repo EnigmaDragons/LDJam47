@@ -9,12 +9,17 @@ public class DailogEvents : MonoBehaviour
     public int pointer;
     private Choices choice;
 
+    // Character Animation Controllers
+    CharacterAnimationController dateCharacterController = null;
+
     void Start()
     {
         overview = GameObject.Find("Overview");
         choice = GameObject.Find("ChoiceManager").GetComponent<Choices>();
         origin = overview.transform.position;
-        NextEvent(1);
+        dateCharacterController = GameObject.FindGameObjectWithTag("DateCharacter").GetComponent<CharacterAnimationController>();
+
+        NextEvent(1); // No code after this
     }
 
     public void NextEvent(int pointer)
@@ -23,7 +28,9 @@ public class DailogEvents : MonoBehaviour
         if(pointer == 0 && choice.currentDate == 0)
         {
             Debug.Log("Game started");
+
             // Have date walk in
+            dateCharacterController.MoveCharacter(dateCharacterController.startingPos, dateCharacterController.walkInPos, 1f);
         }
         else if(pointer == 37 && choice.currentDate == 0)
         {

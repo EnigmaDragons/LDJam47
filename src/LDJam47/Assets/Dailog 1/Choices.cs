@@ -110,7 +110,7 @@ public class Choices : MonoBehaviour
         }
 
         //replaces normal english commas with that
-        tempArray = dateList[currentDate][pointer - 1].Split('=');
+        tempArray = dateList.VerboseIndex(currentDate, nameof(dateList))[pointer - 1].Split('=');
         pointerList = new List<int>();
 
         // gets pointer
@@ -165,7 +165,12 @@ public class Choices : MonoBehaviour
         // reests dialog
         dailog.text = "";
         // fancy smancy text crawl;
-        foreach (char item in tempChoice[0].Replace("PLAYER_NAME", playerName).Replace("Player", playerName).Replace("DATE", "Robin").Replace("player", playerName).Replace("Robbin", "Robin"))
+        foreach (char item in tempChoice[0]
+            .Replace("PLAYER_NAME", playerName)
+            .Replace("Player", playerName)
+            .Replace("DATE", "Robin")
+            .Replace("player", playerName)
+            .Replace("Robbin", "Robin"))
         {
             dailog.text += item;
             yield return new WaitForSeconds(typeSpeed);
