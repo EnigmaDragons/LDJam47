@@ -32,6 +32,8 @@ public class DailogEvents : MonoBehaviour
 
             // sets current date to second date dailog
             choice.currentDate = 1;
+            choice.pointer = 1;
+            
             // bus-kun 
         }
 
@@ -43,6 +45,7 @@ public class DailogEvents : MonoBehaviour
 
             // sets current date to second date dailog
             choice.currentDate = 1;
+            choice.pointer = 1;
             // bus-kun 
         }
 
@@ -55,6 +58,8 @@ public class DailogEvents : MonoBehaviour
 
             // sets current date to second date dailog
             choice.currentDate = 1;
+            choice.pointer = 1;
+
             // bus-kun 
         }
 
