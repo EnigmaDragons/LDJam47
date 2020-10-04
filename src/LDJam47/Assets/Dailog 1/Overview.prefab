@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 617558355948166031}
   - component: {fileID: 617558355948166030}
-  - component: {fileID: 617558355948166028}
   m_Layer: 5
   m_Name: ChoiceManager
   m_TagString: Untagged
@@ -30,7 +29,7 @@ RectTransform:
   m_LocalScale: {x: 0.5760417, y: 0.5760417, z: 0.5760417}
   m_Children: []
   m_Father: {fileID: 617558356677181773}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -49,23 +48,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaf6b38aad31c4469dd9abc351f72a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
+  dateName: 
   typeSpeed: 0
   dailog: {fileID: 0}
   choiceHold: {fileID: 617558356073059173}
   pointerList: 
   pointer: 1
---- !u!114 &617558355948166028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617558355948166017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b941670797b278a4ea6fb297220fa6c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  dailogE: {fileID: 0}
 --- !u!1 &617558356057026752
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +219,7 @@ RectTransform:
   m_LocalScale: {x: 0.5760417, y: 0.5760417, z: 0.5760417}
   m_Children: []
   m_Father: {fileID: 617558356677181773}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -676,8 +666,8 @@ Transform:
   m_LocalPosition: {x: -1.2529315, y: 44.23346, z: 0}
   m_LocalScale: {x: 1.7359855, y: 1.7359855, z: 1.7359855}
   m_Children:
-  - {fileID: 617558355948166031}
   - {fileID: 617558356073059170}
+  - {fileID: 617558355948166031}
   - {fileID: 617558357518430576}
   - {fileID: 617558356654576691}
   - {fileID: 617558357717886874}
