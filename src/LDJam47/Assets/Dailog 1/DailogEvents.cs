@@ -46,7 +46,8 @@ public class DailogEvents : MonoBehaviour
             // sets current date to second date dailog
             choice.currentDate = 1;
             choice.pointer = 1;
-            // bus-kun 
+            // bus-kun  put some sort of delay here
+            choice.GrabText();
         }
 
 
@@ -60,7 +61,8 @@ public class DailogEvents : MonoBehaviour
             choice.currentDate = 1;
             choice.pointer = 1;
 
-            // bus-kun 
+            // bus-kun  put some sort of delay here
+            choice.GrabText();
         }
 
         else
