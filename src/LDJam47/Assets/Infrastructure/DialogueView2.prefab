@@ -526,6 +526,12 @@ MonoBehaviour:
   playerName: George
   dateName: Rhys
   typeSpeed: 0
+  buttons:
+  - {fileID: 9152601370221162992}
+  - {fileID: 874503401057052132}
+  - {fileID: 544282762201882268}
+  - {fileID: 3674496966695965473}
+  - {fileID: 1740055333365521399}
   dailog: {fileID: 0}
   choiceHold: {fileID: 5254452832382392788}
   pointerList: 
@@ -678,6 +684,7 @@ GameObject:
   - component: {fileID: 5254452832975052431}
   - component: {fileID: 5254452832975052416}
   - component: {fileID: 5254452832975052417}
+  - component: {fileID: 1740055333365521399}
   m_Layer: 5
   m_Name: Choice5
   m_TagString: Untagged
@@ -798,6 +805,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1740055333365521399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5254452832975052419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163708653d8c4f4a8fe8c6614f57706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5254452833039098140}
+  button: {fileID: 0}
 --- !u!1 &5254452833039098142
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +965,7 @@ GameObject:
   - component: {fileID: 5254452833312771479}
   - component: {fileID: 5254452833312771432}
   - component: {fileID: 5254452833312771433}
+  - component: {fileID: 544282762201882268}
   m_Layer: 5
   m_Name: Choice3
   m_TagString: Untagged
@@ -1064,6 +1086,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &544282762201882268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5254452833312771435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163708653d8c4f4a8fe8c6614f57706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5254452834308384631}
+  button: {fileID: 0}
 --- !u!1 &5254452833504850980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1112,7 @@ GameObject:
   - component: {fileID: 5254452833504850976}
   - component: {fileID: 5254452833504850977}
   - component: {fileID: 5254452833504850978}
+  - component: {fileID: 874503401057052132}
   m_Layer: 5
   m_Name: Choice2
   m_TagString: Untagged
@@ -1196,6 +1233,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &874503401057052132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5254452833504850980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163708653d8c4f4a8fe8c6614f57706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5254452834433475736}
+  button: {fileID: 0}
 --- !u!1 &5254452833688832016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,6 +1469,7 @@ GameObject:
   - component: {fileID: 5254452833958538536}
   - component: {fileID: 5254452833958538537}
   - component: {fileID: 5254452833958538538}
+  - component: {fileID: 3674496966695965473}
   m_Layer: 5
   m_Name: Choice4
   m_TagString: Untagged
@@ -1538,6 +1590,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3674496966695965473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5254452833958538540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163708653d8c4f4a8fe8c6614f57706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5254452832756806351}
+  button: {fileID: 0}
 --- !u!1 &5254452834060767470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,6 +1616,7 @@ GameObject:
   - component: {fileID: 5254452834060767466}
   - component: {fileID: 5254452834060767467}
   - component: {fileID: 5254452834060767468}
+  - component: {fileID: 9152601370221162992}
   m_Layer: 5
   m_Name: Choice1
   m_TagString: Untagged
@@ -1682,6 +1749,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9152601370221162992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5254452834060767470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163708653d8c4f4a8fe8c6614f57706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5254452833688832030}
+  button: {fileID: 0}
 --- !u!1 &5254452834308384585
 GameObject:
   m_ObjectHideFlags: 0
