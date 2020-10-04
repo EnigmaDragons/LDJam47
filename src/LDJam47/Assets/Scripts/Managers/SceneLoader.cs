@@ -59,9 +59,7 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadSceneByNameCoroutine(sceneName));
     }
 
-    // If there is a save file, load scene that is not completed yet
    
-
     IEnumerator LoadSceneCoroutine(int buildIndex)
     {
         transitionAnimator.SetTrigger("loadLevel");     
