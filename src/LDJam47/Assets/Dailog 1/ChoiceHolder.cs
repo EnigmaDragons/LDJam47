@@ -1,14 +1,17 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ChoiceHolder : MonoBehaviour
 {
-    public List<string> choiceSets;
+    public List<string> dateA;
+    public List<string> dateB;
+    public List<string> dateC;
 
 
     public void Start()
     {
-        choiceSets = new List<string> 
+        dateA = new List<string> 
         {
             "Player: I've never been the type of person to get dates at the drop of a hat. But when I found out Sam and Blake were getting married I knew I couldn’t show my face without a plus one. But knowing me I knew the only chance I had was getting someone to set me up on a blind date. Luckily my friend Dr. Busman has set me up with a date today. Now my only challenge is to get them to be my plus one to Sam and Blake's wedding.=next #2",
             "Robbin: I’ve been waiting for 25 minutes. But Dr. Busman has never let me down so I’ll give you another shot.= Player: Well this place is impossible to find. There is virtually no parking. I’m PLAYER_NAME by the way. #3= Player: Well the weather has been terrible. What was I supposed to do? #3= Player: Well you see my watch broke last week and I ordered a new one online but when it came it was set an hour behind. #3",
@@ -47,6 +50,125 @@ public class ChoiceHolder : MonoBehaviour
             "Robbin: Don’t tell me… you forgot the money, right!? = next #36",
             "Player: Well... funny story, actually this reminds me of a time in Italy with the woodworking clu- = next #37",
             "Robbin: IF YOU MENTION THE WOODWORKING CLUB ONE MORE TIME! You know what… I’m out of here. = next #38",
+        };
+
+        dateB = new List<string>
+        {
+            "Robin: Well PLAYER_MAN you should probably plan ahead better next time. = ...what #2",
+            "Robin: Well, = next #3",
+            "Player: I just saw you get hit by a bus... = next #4",
+            "Robin: Excuse me? =  next #5",
+            "Player: You were just leaving and as you were crossing the street a bus just hit you. = next #6",
+            "Robin: What are you talking about? I've been sitting here waiting for you. Can we just order? = next #7",
+            "Robin: Waiter! = next #8",
+            "Robin calls over the waiter. = #9",
+            "Waiter: Good evening. I will be your waiter this evening. May I start you two off with something to drink? = Wait didn’t we already order? #10 = Didn’t you see Robin get hit by that bus? #11 ",
+            "Response: Well I’ve been here a few times but Robin asked me to wait until you arrived. = next #12",
+            "Response: Hit by a bus? I think I would remember something like that. = next #12",
+            "Robin: Just water is fine for me. = next #13",
+            "Player: I must have hit my head pretty hard when I fainted. Uh… I guess just a water for me too. = next #14",
+            "Waiter: Very good and do you know what entres you will be having this evening = next #15",
+            "Robin: I know what I want but I think PLAYER_NAME needs more time to decide. = next #16",
+            "Waiter: Very well then. = next #17",
+            "The waiter leaves and the player looks over the menu for a few minutes in silence. I’m not sure if I’m even hungry anymore. #18 = I was watching you leave, you started crossing the street, and then out of nowhere this bus comes and hits you.  #19 = How can you think about food right now? #20",
+            "Well you need to get something I’m not gonna eat by myself. = next #21",
+            "I think I would remember if something like that happened. You should check out the fish I hear it's great! = next #21",
+            "Well we’re at a restaurant why wouldn’t I be. = next #21",
+            "Player: So you don’t remember when I told you about my woodworking trip to Italy? = next #22",
+            "Robin: Again this is the first time we’ve met. But I was in Italy last summer. They have some of the best cuisine in the world… = next #23",
+            "Robin talks about their trip to Italy until the waiter returns with the drinks. = next #24",
+            "Waiter: Here are your waters and have we decided on entres? = next #25",
+            "Robin: I’ll have the fish. = Maybe you don’t remember because you hit your head after the bus hit you. #26 = But you look fine. I can’t even see a single scrape.  #26 = I was expecting to wake up in an ambulance or something.  26#",
+            "Robin: I’m sorry about him, maybe just a second order of the fish. = next #27",
+            "Waiter: Very good choice. = next #28",
+            "Player: God! Why am I the only one that remembers anything! = next #29",
+            "Robin: Why can’t I have ONE normal date… = next #30",
+            "Player: [Thinks’] “Man, when is that waiter coming back. I’ve known I wanted the soup of the day for the last five minutes and now I can’t think of anything to say.” = next #31",
+            " Are we in some sort of time loop?  = next #32",
+            "Robin: Time loop? I’ve heard some bad excuses for being late but this is the worst one yet. You know what I’m out of here.  = next #33",
+            "Player: No you can’t leave. If you walk out that door you’re going to die! = next #34",
+            "Robin: Ever since you arrived here you’ve been acting weird, talking about this “time loop”. If you think this is going to work on me you are sorely mistaken. I have better things to do with my time then waste them on some lunatic.  = next #35",
+            "Robin gets up from the table and starts to walk towards the door. Player gets up and tries to stop her before she reaches the door.  = next #36",
+            "Robin: Get your hands off me! = next #37",
+            "Player: Please don’t. = next #38",
+            "The waiter pulls the player off of Robin. = next #39",
+            "Waiter: Come on buddy just let the nice lady go. She doesn’t want to eat with you. = next #40",
+            "Player: Please you have to stop her. She’s going to die. = next #41",
+            "Robin steps out of the restaurant. = next #42",
+            "Robin: See I’m fi- = next #43",
+        };
+
+        dateC = new List<string>
+        {
+            "Robin: Well PLAYER_NAME you should probably plan ahead better next time.  = next #2",
+            "Player: Okay, It’s happening again.  Play it cool, PLAYER_NAME.  If she has a nice time on the date, she won’t walk away and get hit by the bus.  =  Well let's order. I’ve been excited to try this place. #3 = I’ll get the waiter. #3 = This place is kind of whack. Do you wanna just get out of here? #4",
+            "Player calls over the waiter. = next #5",
+            "Robin: No I think it's fine. Lets just order. Robin calls over the waiter. = next #5",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
         };
     }
 }

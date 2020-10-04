@@ -49,6 +49,8 @@ public class Choices : MonoBehaviour
     List<TextMeshProUGUI> textList;
     List<Button> buttonList;
 
+    public List<List<string>> dateList;
+    public int currentDate;
     void Start()
     {
         // points to very first conversation
@@ -76,6 +78,8 @@ public class Choices : MonoBehaviour
         buttonList = new List<Button> { choice1Button, choice2Button, choice3Button, choice4Button, choice5Button };
 
         dailogE = GameObject.Find("Overview").GetComponent<DailogEvents>();
+
+        dateList = new List<List<string>> { choiceHold.dateA, choiceHold.dateB, choiceHold.dateC };
         //Begins dailog system
         GrabText();
     }
@@ -102,7 +106,7 @@ public class Choices : MonoBehaviour
         }
 
         //replaces normal english commas with that
-        tempArray = choiceHold.choiceSets[pointer - 1].Split('=');
+        tempArray = dateList[currentDate][pointer - 1].Split('=');
         pointerList = new List<int>();
 
         // gets pointer
