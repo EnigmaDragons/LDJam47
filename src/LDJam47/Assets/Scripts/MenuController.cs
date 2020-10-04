@@ -57,13 +57,20 @@ namespace SpeedTutorMainMenuSystem
         #endregion
 
         #region Initialisation - Button Selection & Menu Order
+
+        // Scene Manager
+        SceneLoader sceneLoader = null;
+
         private void Start()
         {
 	        GoBackToMainMenu();
 
             menuNumber = 1;
+
+            sceneLoader = SceneLoader.SceneLoaderInstance;
         }
         #endregion
+
 
         //MAIN SECTION
         public IEnumerator ConfirmationBox()
@@ -258,7 +265,7 @@ namespace SpeedTutorMainMenuSystem
         {
             if (ButtonType == "Yes")
             {
-                SceneManager.LoadScene(_newGameButtonLevel);
+                sceneLoader.LoadSceneByName(_newGameButtonLevel);
             }
 
             if (ButtonType == "No")
@@ -276,7 +283,7 @@ namespace SpeedTutorMainMenuSystem
                     Debug.Log("I WANT TO LOAD THE SAVED GAME");
                     //LOAD LAST SAVED SCENE
                     levelToLoad = PlayerPrefs.GetString("SavedLevel");
-                    SceneManager.LoadScene(levelToLoad);
+                    sceneLoader.LoadSceneByName(levelToLoad);
                 }
 
                 else

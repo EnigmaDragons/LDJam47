@@ -40,35 +40,38 @@ public class SceneLoader : MonoBehaviour
     public void ReloadScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(LoadScene(currentSceneIndex));
+        StartCoroutine(LoadSceneCoroutine(currentSceneIndex));
     }
 
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(LoadScene(currentSceneIndex + 1));
+        StartCoroutine(LoadSceneCoroutine(currentSceneIndex + 1));
     }
 
     public void LoadMainMenu()
     {
-        StartCoroutine(LoadScene(0));
+        StartCoroutine(LoadSceneCoroutine(0));
+    }
+
+    public void LoadSceneByName(string sceneName)
+    {
+        StartCoroutine(LoadSceneByNameCoroutine(sceneName));
     }
 
     // If there is a save file, load scene that is not completed yet
    
 
-    IEnumerator LoadScene(int buildIndex)
+    IEnumerator LoadSceneCoroutine(int buildIndex)
     {
-        transitionAnimator.SetTrigger("loadLevel");
-        
+        transitionAnimator.SetTrigger("loadLevel");     
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(buildIndex);
     }
 
-    IEnumerator LoadSceneByName(string sceneName)
+    IEnumerator LoadSceneByNameCoroutine(string sceneName)
     {
-        transitionAnimator.SetTrigger("loadLevel");
-       
+        transitionAnimator.SetTrigger("loadLevel");    
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneName);
     }
