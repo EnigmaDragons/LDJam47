@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PauseMenuController : MonoBehaviour
 {
@@ -9,9 +8,12 @@ public class PauseMenuController : MonoBehaviour
     private bool paused = false;
     private bool isPauseAxisInUse = false;
 
+	SceneLoader sceneLoader = null;
+
 	void Start()
 	{
 		forHiding.SetActive(false);
+		sceneLoader = SceneLoader.SceneLoaderInstance;
 	}
 
     void Update()
@@ -66,6 +68,6 @@ public class PauseMenuController : MonoBehaviour
     {
 	    Time.timeScale = 1;
 
-	    SceneManager.LoadScene(0);
-    }
+		sceneLoader.LoadMainMenu();
+	}
 }
