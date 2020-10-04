@@ -37,6 +37,7 @@ public class DailogEvents : MonoBehaviour
 
             // Have date walk in
             dateCharacterController.SetTrigger("sitDownTrigger");
+            dateCharacterController.ChangeFacialExpression("Happy");
         }
         else if(pointer == 37 && choice.currentDate == 0)
         {
