@@ -36,7 +36,7 @@ public class DailogEvents : MonoBehaviour
             Debug.Log("Game started");
 
             // Have date walk in
-            dateCharacterController.MoveCharacter(dateCharacterController.startingPos, dateCharacterController.walkInPos, 1f);
+            dateCharacterController.SetTrigger("sitDownTrigger");
         }
         else if(pointer == 37 && choice.currentDate == 0)
         {
