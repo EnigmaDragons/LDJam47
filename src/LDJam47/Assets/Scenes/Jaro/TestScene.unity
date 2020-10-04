@@ -418,10 +418,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2144166603, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 2687088782362939984, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -514,13 +510,5 @@ PrefabInstance:
       propertyPath: brightnessEffect
       value: 
       objectReference: {fileID: 492354107}
-    - target: {fileID: 4773064622942442131, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6394457548490912548, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76b74fa7f3bcc5242ac8f05591246554, type: 3}
