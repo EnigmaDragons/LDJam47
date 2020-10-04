@@ -13,6 +13,7 @@ public class PauseMenuController : MonoBehaviour
 	void Start()
 	{
 		forHiding.SetActive(false);
+
 		sceneLoader = SceneLoader.SceneLoaderInstance;
 	}
 

@@ -3,13 +3,26 @@
 
 public class GameOverController : MonoBehaviour
 {
-	void Start()
-    {
+	[SerializeField] private GameObject forHiding;
 
-    }
+	private SceneLoader sceneLoader = null;
 
-    void Update()
-    {
+	private void Start()
+	{
+		forHiding.SetActive(false);
 
-    }
+		sceneLoader = SceneLoader.SceneLoaderInstance;
+	}
+
+	public void Show()
+	{
+		forHiding.SetActive(true);
+	}
+
+	public void GoToMainMenu()
+	{
+		Time.timeScale = 1;
+
+		sceneLoader.LoadMainMenu();
+	}
 }
