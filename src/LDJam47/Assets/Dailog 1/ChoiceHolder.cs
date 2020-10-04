@@ -22,6 +22,15 @@ public class ChoiceHolder : MonoBehaviour
            "PLAYER_NAME: Geez I’m here for two seconds and you’re already bitching. = next #11",
            "PLAYER_NAME: Hey if I got to wait around in a place like this I wouldn’t be complaining. Lighten up. = next #11",
            "Robin: Yeah... sure… = Don’t be mad. Hey waiter! We’ll take two beers. #12 = It’s Friday baby! Hey waiter! A round of tequila shots! #13 = Drinks? Hey waiter! I’m thinking margs for the table. #14",
+           "PLAYER_NAME: Don’t be mad. Hey waiter! We’ll take two beers. = next #15",
+           "PLAYER_NAME: It’s Friday baby! Hey waiter! A round of tequila shots! = next #15",
+           "PLAYER_NAME: Drinks? Hey waiter! I’m thinking margs for the table. = next #15",
+           "Robin: Actually water is fine for me. = You’re gonna get something a little stronger. My treat. #16 = You’re not gonna make me drink alone are you? Plus I’m paying. #17 = Come on you didn’t come out tonight to drink water? Don’t worry I’ll cover this round. #18",
+           "PLAYER_NAME: You’re gonna get something a little stronger. My treat. = next #19",
+           "PLAYER_NAME: You’re not gonna make me drink alone are you? Plus I’m paying. = next #19",
+           "PLAYER_NAME:  Come on you didn’t come out tonight to drink water? Don’t worry I’ll cover this round. = next #19",
+           "Robin: Ok fine but could I also get some water. = next #20",
+           "Waiter: No problem I’ll be back with your drinks soon. (current end)"
 
 
 
