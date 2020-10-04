@@ -9,12 +9,23 @@ public class DailogEvents : MonoBehaviour
     public int pointer;
     private Choices choice;
 
+    // Character Animation Controllers
+    CharacterAnimationController dateCharacterController = null;
+
     void Start()
     {
         overview = GameObject.Find("Overview");
         choice = GameObject.Find("ChoiceManager").GetComponent<Choices>();
         origin = overview.transform.position;
-        NextEvent(1);
+        dateCharacterController = GameObject.FindGameObjectWithTag("DateCharacter").GetComponent<CharacterAnimationController>();
+        StartCoroutine(StartGame());
+    }
+
+    // Starts the game little delay to avoid null reference exceptions. In the start method, some things may have not loaded yet
+    IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(0.2f);
+        NextEvent(1); 
     }
 
     public void NextEvent(int pointer)
@@ -23,7 +34,9 @@ public class DailogEvents : MonoBehaviour
         if(pointer == 0 && choice.currentDate == 0)
         {
             Debug.Log("Game started");
+
             // Have date walk in
+            dateCharacterController.SetTrigger("sitDownTrigger");
         }
         else if(pointer == 37 && choice.currentDate == 0)
         {

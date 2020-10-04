@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class ChoiceHolder : MonoBehaviour
 {
@@ -8,8 +7,7 @@ public class ChoiceHolder : MonoBehaviour
     public List<string> dateB;
     public List<string> dateC;
 
-
-    public void Start()
+    public void Awake()
     {
         dateA = new List<string>
         { 

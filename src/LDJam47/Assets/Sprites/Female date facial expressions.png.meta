@@ -1,0 +1,361 @@
+fileFormatVersion: 2
+guid: a52060ee50c1a6448bd7fb06cc1f1d55
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1509348406806912937
+    second: Female date facial expressions_0
+  - first:
+      213: 4641702373257310160
+    second: Female date facial expressions_1
+  - first:
+      213: -1996540886335952499
+    second: Female date facial expressions_2
+  - first:
+      213: 1316289911850538239
+    second: Female date facial expressions_3
+  - first:
+      213: -886377963303428086
+    second: Female date facial expressions_4
+  - first:
+      213: 1777556748383816487
+    second: Female date facial expressions_5
+  - first:
+      213: -7860852616638717986
+    second: Female date facial expressions_6
+  - first:
+      213: 4225911862844290205
+    second: Female date facial expressions_7
+  - first:
+      213: -6963628003495316552
+    second: Female date facial expressions_8
+  - first:
+      213: -1051635546680999827
+    second: Female date facial expressions_9
+  - first:
+      213: 3629882410255003147
+    second: Female date facial expressions_10
+  - first:
+      213: -1683499811045185769
+    second: Female date facial expressions_11
+  - first:
+      213: 1495185185154558853
+    second: Female date facial expressions_12
+  - first:
+      213: -1183278268341127218
+    second: Female date facial expressions_13
+  - first:
+      213: 3586004164243410403
+    second: Female date facial expressions_14
+  - first:
+      213: 3009565880516454808
+    second: Female date facial expressions_15
+  - first:
+      213: -1074907369004553628
+    second: Female date facial expressions_16
+  - first:
+      213: 4692443325670902216
+    second: Female date facial expressions_17
+  - first:
+      213: -3702785240720042294
+    second: Female date facial expressions_18
+  - first:
+      213: -6483814796819758048
+    second: Female date facial expressions_19
+  - first:
+      213: 1823330614592884734
+    second: Female date facial expressions_20
+  - first:
+      213: 7019258543726078801
+    second: Female date facial expressions_21
+  - first:
+      213: 9175204396587381603
+    second: Female date facial expressions_22
+  - first:
+      213: 163187000945100965
+    second: Female date facial expressions_23
+  - first:
+      213: 1829293817174191997
+    second: Female date facial expressions_24
+  - first:
+      213: -4245256913891066672
+    second: Female date facial expressions_25
+  - first:
+      213: -8636158425857054598
+    second: Female date facial expressions_26
+  - first:
+      213: -2088909558900021482
+    second: Female date facial expressions_27
+  - first:
+      213: 7686434586684908757
+    second: Female date facial expressions_28
+  - first:
+      213: 1010560934966436729
+    second: Female date facial expressions_29
+  - first:
+      213: -1924730371279901100
+    second: Female date facial expressions_30
+  - first:
+      213: -2625463943047879983
+    second: Female date facial expressions_31
+  - first:
+      213: 1753718332826079126
+    second: Female date facial expressions_32
+  - first:
+      213: 2461806462884470525
+    second: Female date facial expressions_33
+  - first:
+      213: 2530237263193976044
+    second: Female date facial expressions_34
+  - first:
+      213: 8582432577290129021
+    second: Female date facial expressions_35
+  - first:
+      213: 3242334672544766090
+    second: Female date facial expressions_36
+  - first:
+      213: -1911094903635348406
+    second: Female date facial expressions_37
+  - first:
+      213: 81805910712410274
+    second: Female date facial expressions_38
+  - first:
+      213: -1253141436126697649
+    second: Female date facial expressions_39
+  - first:
+      213: 2797293972392137674
+    second: Female date facial expressions_40
+  - first:
+      213: -3873555040299814918
+    second: Female date facial expressions_41
+  - first:
+      213: -2312480798820186585
+    second: Female date facial expressions_42
+  - first:
+      213: 7722705901397905577
+    second: Female date facial expressions_43
+  - first:
+      213: -750843155821301329
+    second: Female date facial expressions_44
+  - first:
+      213: -4113141521223003149
+    second: Female date facial expressions_45
+  - first:
+      213: 4201198125226835141
+    second: Female date facial expressions_46
+  - first:
+      213: -2635686228391790616
+    second: Female date facial expressions_47
+  - first:
+      213: 8196944514293405433
+    second: Female date facial expressions_48
+  - first:
+      213: 8830253591733884653
+    second: Female date facial expressions_49
+  - first:
+      213: -263152431099431271
+    second: Female date facial expressions_50
+  - first:
+      213: -6887724058995226153
+    second: Female date facial expressions_51
+  - first:
+      213: -3954959635883361958
+    second: Female date facial expressions_52
+  - first:
+      213: -1788277718482220236
+    second: Female date facial expressions_53
+  - first:
+      213: 7010157539340633230
+    second: Female date facial expressions_54
+  - first:
+      213: 775824441496200367
+    second: Female date facial expressions_55
+  - first:
+      213: 144828243774675058
+    second: Female date facial expressions_56
+  - first:
+      213: 8162330541211033544
+    second: Female date facial expressions_57
+  - first:
+      213: -5043998878697095514
+    second: Female date facial expressions_58
+  - first:
+      213: 7170538538262710682
+    second: Female date facial expressions_59
+  - first:
+      213: -8168425723397608026
+    second: Female date facial expressions_60
+  - first:
+      213: -7862158801635611985
+    second: Female date facial expressions_61
+  - first:
+      213: -8191056235700885588
+    second: Female date facial expressions_62
+  - first:
+      213: -6728534433070650935
+    second: Female date facial expressions_63
+  - first:
+      213: -3390376696953557771
+    second: Female date facial expressions_64
+  - first:
+      213: -7456566829995146425
+    second: Female date facial expressions_65
+  - first:
+      213: 7886099035456448159
+    second: Female date facial expressions_66
+  - first:
+      213: -2620981079175604763
+    second: Female date facial expressions_67
+  - first:
+      213: -5268933296238920422
+    second: Female date facial expressions_68
+  - first:
+      213: -69635086756239424
+    second: Female date facial expressions_69
+  - first:
+      213: -6464372370012479935
+    second: Female date facial expressions_70
+  - first:
+      213: 94989592122752056
+    second: Female date facial expressions_71
+  - first:
+      213: -7677533514017509644
+    second: Female date facial expressions_72
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

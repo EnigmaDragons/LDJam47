@@ -16,6 +16,7 @@ public class Choices : MonoBehaviour
     public string playerName;
     public string dateName;
     public float typeSpeed;
+    public TextButton[] buttons;
     [HideInInspector]public TextMeshProUGUI dailog;
 
     private TextMeshProUGUI choice1;
@@ -57,20 +58,23 @@ public class Choices : MonoBehaviour
         //Prep work 
         dailog = GameObject.Find("Dialog").GetComponent<TextMeshProUGUI>();
 
-        choice1 = GameObject.Find("Choice1").transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        choice1Button = GameObject.Find("Choice1").GetComponent<Button>();
+        if (buttons.Length < 5)
+            Debug.Log("Need 5 buttons");
+        
+        choice1 = buttons[0].text;
+        choice1Button = buttons[0].button;
 
-        choice2 = GameObject.Find("Choice2").transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        choice2Button = GameObject.Find("Choice2").GetComponent<Button>();
-
-        choice3 = GameObject.Find("Choice3").transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        choice3Button = GameObject.Find("Choice3").GetComponent<Button>();
-
-        choice4 = GameObject.Find("Choice4").transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        choice4Button = GameObject.Find("Choice4").GetComponent<Button>();
-
-        choice5 = GameObject.Find("Choice5").transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        choice5Button = GameObject.Find("Choice5").GetComponent<Button>();
+        choice2 = buttons[1].text;
+        choice2Button = buttons[1].button;
+        
+        choice3 = buttons[2].text;
+        choice3Button = buttons[2].button;
+        
+        choice4 = buttons[3].text;
+        choice4Button = buttons[3].button;
+        
+        choice5 = buttons[4].text;
+        choice5Button = buttons[4].button;
 
         choiceHold = GameObject.Find("Choicelist").GetComponent<ChoiceHolder>();
 
@@ -106,7 +110,7 @@ public class Choices : MonoBehaviour
         }
 
         //replaces normal english commas with that
-        tempArray = dateList[currentDate][pointer - 1].Split('=');
+        tempArray = dateList.VerboseIndex(currentDate, nameof(dateList))[pointer - 1].Split('=');
         pointerList = new List<int>();
 
         // gets pointer
@@ -161,7 +165,12 @@ public class Choices : MonoBehaviour
         // reests dialog
         dailog.text = "";
         // fancy smancy text crawl;
-        foreach (char item in tempChoice[0].Replace("PLAYER_NAME", playerName).Replace("Player", playerName).Replace("DATE", "Robin").Replace("player", playerName).Replace("Robbin", "Robin"))
+        foreach (char item in tempChoice[0]
+            .Replace("PLAYER_NAME", playerName)
+            .Replace("Player", playerName)
+            .Replace("DATE", "Robin")
+            .Replace("player", playerName)
+            .Replace("Robbin", "Robin"))
         {
             dailog.text += item;
             yield return new WaitForSeconds(typeSpeed);
