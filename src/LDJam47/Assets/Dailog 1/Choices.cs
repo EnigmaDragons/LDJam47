@@ -161,7 +161,7 @@ public class Choices : MonoBehaviour
         // reests dialog
         dailog.text = "";
         // fancy smancy text crawl;
-        foreach (char item in tempChoice[0].Replace("PLAYER_NAME", playerName).Replace("Player", playerName).Replace("DATE", dateName))
+        foreach (char item in tempChoice[0].Replace("PLAYER_NAME", playerName).Replace("Player", playerName).Replace("DATE", "Robin").Replace("player", playerName).Replace("Robbin", "Robin"))
         {
             dailog.text += item;
             yield return new WaitForSeconds(typeSpeed);
