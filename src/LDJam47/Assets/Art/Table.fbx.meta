@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: c98b381c7340b0f42a92993c20f5c7a7
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Fork1
+    100002: Fork2
+    100004: Forks
+    100006: Glass
+    100008: Glass 1
+    100010: Glass1
+    100012: Glass2
+    100014: Glasses
+    100016: Napkin1
+    100018: Napkin2
+    100020: Napkins
+    100022: Other
+    100024: Plate1
+    100026: Plate2
+    100028: Plates
+    100030: Stand
+    100032: //RootNode
+    100034: Tablecloth
+    100036: Top
+    100038: Wine
+    100040: Wine 1
+    400000: Fork1
+    400002: Fork2
+    400004: Forks
+    400006: Glass
+    400008: Glass 1
+    400010: Glass1
+    400012: Glass2
+    400014: Glasses
+    400016: Napkin1
+    400018: Napkin2
+    400020: Napkins
+    400022: Other
+    400024: Plate1
+    400026: Plate2
+    400028: Plates
+    400030: Stand
+    400032: //RootNode
+    400034: Tablecloth
+    400036: Top
+    400038: Wine
+    400040: Wine 1
+    2100000: Stand1
+    2100002: lambert1
+    2100004: Default_Material
+    2100006: Napkin
+    2100008: Plate
+    2100010: Wine_Glasses
+    2100012: Wine1
+    2100014: Fork
+    2300000: Fork1
+    2300002: Fork2
+    2300004: Glass
+    2300006: Glass 1
+    2300008: Napkin1
+    2300010: Napkin2
+    2300012: Plate1
+    2300014: Plate2
+    2300016: Stand
+    2300018: Tablecloth
+    2300020: Top
+    2300022: Wine
+    2300024: Wine 1
+    3300000: Fork1
+    3300002: Fork2
+    3300004: Glass
+    3300006: Glass 1
+    3300008: Napkin1
+    3300010: Napkin2
+    3300012: Plate1
+    3300014: Plate2
+    3300016: Stand
+    3300018: Tablecloth
+    3300020: Top
+    3300022: Wine
+    3300024: Wine 1
+    4300000: Stand
+    4300002: Top
+    4300004: Tablecloth
+    4300006: Napkin1
+    4300008: Napkin2
+    4300010: Plate2
+    4300012: Plate1
+    4300014: Glass
+    4300016: Wine
+    4300018: Glass
+    4300020: Wine
+    4300022: Fork2
+    4300024: Fork1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
