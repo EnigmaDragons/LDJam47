@@ -39,7 +39,32 @@ public class ChoiceHolder : MonoBehaviour
            "PLAYER_NAME: Well I used to be chef at the Panera until my ex got me fired. After each shift they would just throw away the extra bagels. Once I found out I volunteered to do it and just stashed the extras. I thought they would be happy for the free food. How about you? = next #29",
            "PLAYER_NAME: I had this gig managing a motocross park during the week but my ex got pissed and told the manager about the parties I was throwing there so now on Monday I gotta go in an apologize and shit. How about you? = next #29",
            "PLAYER_NAME: My ex used to make these jewelry things and I was helping her sell them online before we broke up. But I still have access to the paypal which is nice. How about you? = next #29",
-           "Robin: Oh I’m an agent at Compass Realty Group."
+           "Robin: Oh I’m an agent at Compass Realty Group. = [Horse Betting] #30 = [Can you sell my RV] #31 = [I could be a realtor] #32",
+           "PLAYER_NAME: Oh shit. Yeah y'all have a big billboard on route 183 right outside the horse racing track. Two weekends ago I went to the track with some friends and my buddy Eric and I bet $250 on the race. I’ve never seen someone lose their paycheck that fast. = next #33",
+           "PLAYER_NAME: Oh so you sell houses and shit? I have this old RV my Grandad left me that I was thinking about selling. But I put a lot of work into it so maybe not. When I turn on all the interior lights it looks like one of those professional party buses and I have some pretty nice speakers too. = next #33",
+           "PLAYER_NAME: I bet I could sell a house better than 99% of the people you work with. I’m really good at convincing people that they need stuff. I could even pull out an old suit I have and get all fancy. I’m such a great salesman, I could sell a glass of water to a scuba diver. = #33",
+           "Robin: Well that’s interesting… = Man when are those drinks getting here… #34 = Fuck I thought this was a nice place. #35 = Didn’t I order our drinks like ten minutes ago? #36",
+           "PLAYER_NAME: Man when are those drinks getting here… Have you been here before? Are they usually this slow? = next #37",
+           "PLAYER_NAME: Fuck I thought this was a nice place. Where the hell are our drinks. Don’t you hate places with slow service? = next #37",
+           "PLAYER_NAME: Didn’t I order our drinks like ten minutes ago? What’s taking them so long? = next #37",
+           "Robin: I’m sure they are working as fast as they can. = Don’t be so idiotic. If you want shit in life you gotta take it. #38 = Don’t be so naive. These people will try to scam you if you give them the chance. #39 = You can’t be that dumb. I’ve seen our waiter pass by the bar 3 times by now and not get our drinks. #40",
+           "PLAYER_NAME: Don’t be so idiotic. If you want shit in life you gotta take it. = next #41",
+           "PLAYER_NAME: Don’t be so naive. These people will try to scam you if you give them the chance. = next #41",
+           "PLAYER_NAME: You can’t be that dumb. I’ve seen our waiter pass by the bar 3 times by now and not get our drinks. = next #41",
+           "Robin: Excuse me? You can't be serious. = What, you don’t believe me? #42 = Oh I’m serious alright. #43 = Fuck me I’m so thirsty. #44",
+           "PLAYER_NAME: What, you don’t believe me? Here I’ll prove it. Hey Waiter, could you make our drinks any slower?! = next #45",
+           "PLAYER_NAME: Oh I’m serious alright. Excuse me!? Are you really going to make my date wait this long for their simple drink order?! = next #45",
+           "PLAYER_NAME: Fuck me I’m so thirsty. If only someone whose job it is to serve me drinks would get off their lazy ass! = next #45",
+           "Waiter: Sir your drinks are being made right now and I assure you they are coming as quickly as possible. = next #46",
+           "Robin: You know what fuck this. This date is over. You know you’re a complete ass right? = Hey it's not my fault #47 = What are you talking about? #48 = I’m an ass? #49",
+           "PLAYER_NAME: Hey it's not my fault they screwed up our orders. = next #50",
+           "PLAYER_NAME: What are you talking about? Don’t go. They just said our drinks were about to get here. = next #50",
+           "PLAYER_NAME: I’m an ass? At least I’m not some boring bitch that orders water on Friday night. = next #50",
+
+
+
+
+
 
 
 
