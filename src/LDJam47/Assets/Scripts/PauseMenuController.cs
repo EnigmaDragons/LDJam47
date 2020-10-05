@@ -3,7 +3,7 @@
 public class PauseMenuController : MonoBehaviour
 {
 	[SerializeField] private GameObject forHiding;
-	[SerializeField] private  GameObject mainPauseMenu;
+	[SerializeField] private GameObject mainPauseMenu;
 
     private bool paused = false;
     private bool isPauseAxisInUse = false;
