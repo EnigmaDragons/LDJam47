@@ -155,7 +155,7 @@ public class DailogEvents : MonoBehaviour
         choice.currentDate = dateNumber;
 
         // Deactivate text progression
-        choice.enabled = false;
+        //choice.enabled = false;
 
         // Fade To Black
         yield return new WaitForSeconds(2f); // duration of the fade
@@ -165,7 +165,7 @@ public class DailogEvents : MonoBehaviour
         yield return new WaitForSeconds(1f); // duration of the fade
 
         // Reactivate text progression
-        choice.enabled = true;
+        //choice.enabled = true;
         choice.GrabText();
     }
 
