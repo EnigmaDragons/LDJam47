@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
 
-public class InitIntroLoopAudioPlayer : CrossSceneSingleInstance
+public class InitIntroLoopAudioPlayer : MonoBehaviour
 {
     [SerializeField] private IntroLoopAudioPlayer player;
-    
-    protected override string UniqueTag => "Music";
-    
-    protected override void OnAwake()
+
+    protected void Start()
     {
         player.Init();
     }

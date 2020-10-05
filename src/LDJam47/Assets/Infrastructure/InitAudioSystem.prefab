@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7116733024407163974}
-  - component: {fileID: 7116733024407163968}
   - component: {fileID: 7116733024407163969}
+  - component: {fileID: 7116733024407163968}
+  - component: {fileID: 5884444333378583648}
   m_Layer: 0
   m_Name: MusicPlayer
   m_TagString: Music
@@ -32,19 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7116733024407163968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7116733024407163971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 368e00a08d575db4c8556e955d051e26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: 2d09577cb1193934285185380016eb2c, type: 2}
 --- !u!114 &7116733024407163969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,5 +51,38 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     FloatVariable: {fileID: 11400000, guid: 207b20092a90e8343956e66737360d7c, type: 2}
+  player: {fileID: 0}
+  demoSound: {fileID: 0}
+--- !u!114 &7116733024407163968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116733024407163971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368e00a08d575db4c8556e955d051e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: 2d09577cb1193934285185380016eb2c, type: 2}
+--- !u!114 &5884444333378583648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116733024407163971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429f671631269d34f9c200d687c5c1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 55c53923bee9c8a4e80aeeeb2882cbc7, type: 2}
+  valueName: SoundVolume
+  reductionDb:
+    UseConstant: 0
+    ConstantValue: 0
+    FloatVariable: {fileID: 11400000, guid: f75e490bafa1ed24ebc3b90e6ad41fb3, type: 2}
   player: {fileID: 0}
   demoSound: {fileID: 0}
