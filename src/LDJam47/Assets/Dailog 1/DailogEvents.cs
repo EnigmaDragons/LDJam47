@@ -124,37 +124,27 @@ public class DailogEvents : MonoBehaviour
         // End of date 2
         else if ((pointer == 48) && choice.currentDate == 1)
         {
-           // choice.pointer = 1;
-           // choice.currentDate = 2;
+            choice.pointer = 1;
+            choice.currentDate = 2;
 
 
-            sceneLoader.LoadSceneByName("BusScene");
+           // sceneLoader.LoadSceneByName("BusScene");
 
-            //choice.GrabText();
+            choice.GrabText();
         }
 
         //DATE C DAILOG STUFF
         else if ((pointer == 1) && choice.currentDate == 2)
         {
-            sceneLoader.FadeFromBlack();
+            //sceneLoader.FadeFromBlack();
         }
-        else if ((pointer == 1 || pointer == 2 || pointer == 3) && choice.currentDate == 2)
+        else if ((pointer == 43 || pointer == 42) && choice.currentDate == 2)
         {
-            maxBad += 1;
-
-            if (currentBad >= maxBad)
-            {
-                //Jumps to bad ending
-                choice.pointer = 50;
-
-                choice.GrabText();
-            }
-            else
-            {
-                // not enough bad keep playing game
-                choice.GrabText();
-            }
+            Debug.Log("End of date 3 FadeFromBlack test");
+            sceneLoader.LoadSceneByName("FinalCreditsScene");
         }
+        
+        
 
         else
         {

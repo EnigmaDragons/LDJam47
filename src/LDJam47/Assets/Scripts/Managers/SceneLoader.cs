@@ -75,7 +75,7 @@ public class SceneLoader : MonoBehaviour
     IEnumerator LoadSceneByNameCoroutine(string sceneName)
     {
         Debug.Log("Loading Scene");
-        FadeToBlack();
+        //FadeToBlack();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneName);
     }
