@@ -17,8 +17,8 @@ public sealed class MixerVolumeSlider : MonoBehaviour
     
     public void SetLevel(float sliderValue)
     {
-        var mixerVolume = (Mathf.Log10(sliderValue) * 20) - reductionDb;
-        Debug.Log($"Slider - Set Audio Level for {valueName} to {sliderValue} ({mixerVolume}db)");
+        var mixerVolume = sliderValue > 0 ? (Mathf.Log10(sliderValue) * 20) - reductionDb : -120;
+        Debug.Log($"Audio - Slider - Set Audio Level for {valueName} to {sliderValue} ({mixerVolume}db)", this);
         mixer.SetFloat(valueName, mixerVolume);
         PlayerPrefs.SetFloat(valueName, sliderValue);
         Message.Publish(new MixerVolumeChanged(valueName));

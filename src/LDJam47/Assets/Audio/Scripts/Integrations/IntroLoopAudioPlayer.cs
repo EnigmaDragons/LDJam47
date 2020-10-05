@@ -14,7 +14,7 @@ public class IntroLoopAudioPlayer : ScriptableObject
     public void Init()
     {
         var mixerGroup = mixer.FindMatchingGroups(mixerGroupName)[0];
-        Debug.Log($"IntroLoop - Mixer Group - {mixerGroup.name}");
+        Debug.Log($"Audio - IntroLoop - Mixer Group - {mixerGroup.name}");
         IntroloopPlayer.Instance.SetMixerGroup(mixerGroup);
         currentClip = null;
     }
