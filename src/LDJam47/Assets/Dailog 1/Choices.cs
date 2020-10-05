@@ -84,7 +84,7 @@ public class Choices : MonoBehaviour
 
         dateList = new List<List<string>> { choiceHold.dateA, choiceHold.dateB, choiceHold.dateC };
         //Begins dailog system
-        GrabText();
+        //GrabText();
     }
 
     public void NextConvo()
@@ -187,15 +187,18 @@ public class Choices : MonoBehaviour
             .Replace("DATE", "Robin")
             .Replace("player", playerName)
             .Replace("Robbin", "Robin");
-        for (int i = 0; i < tempChoice[0].Length; i++)
+        /*
+        foreach (var item in tempChoice[0])
         {
-            string choiceHold = tempChoice[0][i].ToString();
-
-
-            dailog.text += choiceHold;
+            dailog.text += item;
             yield return new WaitForSecondsRealtime(typeSpeed);
         }
-        
+        */
+        for (int i = 0; i < tempChoice[0].Length; i++)
+        {
+            dailog.text += tempChoice[0][i];
+            yield return new WaitForSecondsRealtime(typeSpeed);
+        }
         // enables and finishes up ui. 
         SetUi(tempChoice);
     }
