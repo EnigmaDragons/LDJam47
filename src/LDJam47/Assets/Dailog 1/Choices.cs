@@ -94,7 +94,7 @@ public class Choices : MonoBehaviour
         Debug.Log("fired");
         if (EventSystem.current.currentSelectedGameObject != null)
         {
-            if (EventSystem.current.currentSelectedGameObject.name == "nextChoice")
+            if (EventSystem.current.currentSelectedGameObject.name == "choiceNext")
             {
                 pointer = pointerList[0];
             }
