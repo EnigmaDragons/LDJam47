@@ -66,8 +66,8 @@ public class ChoiceHolder : MonoBehaviour
            "PLAYER_NAME: If that idiot waiter had just brought us our drinks none of this would have happened. = next #54",
            "PLAYER_NAME: I go back into the restaurant to get an apology from that dumbass and they fucking kick me out. = next #55",
            "PLAYER_NAME: Robin was just laying there. = next #56",
-           "PLAYER_NAME:  I feel sick. = next #57",
-           ""
+           "PLAYER_NAME: I feel sick. = next #57",
+           "PLAYER_NAME: The image keeps playing back over and over in my head. Over and over and over and over and over..."
         };
 
         dateB = new List<string>
@@ -119,8 +119,7 @@ public class ChoiceHolder : MonoBehaviour
             "PLAYER_NAME: But when I heard that sound my instincts took over. = next #46",
             "PLAYER_NAME: I was already on the line with 911 before I got outside. = next #47",
             "PLAYER_NAME: But the scene was the same as the image burned into my mind. = next #48",
-
-            "PLAYER_NAME: This is all my fault. = next #50",
+            "PLAYER_NAME: This is all my fault. = next #49",
             ""
         };
 
