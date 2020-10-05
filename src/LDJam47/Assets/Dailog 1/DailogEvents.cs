@@ -14,7 +14,7 @@ public class DailogEvents : MonoBehaviour
 
     void Start()
     {
-        overview = GameObject.Find("Overview");
+        overview = GameObject.Find("DialogueView2");
         choice = GameObject.Find("ChoiceManager").GetComponent<Choices>();
         origin = overview.transform.position;
         dateCharacterController = GameObject.FindGameObjectWithTag("DateCharacter").GetComponent<CharacterAnimationController>();
@@ -39,7 +39,8 @@ public class DailogEvents : MonoBehaviour
             dateCharacterController.SetTrigger("sitDownTrigger");
             dateCharacterController.ChangeFacialExpression("Happy");
         }
-        else if(pointer == 37 && choice.currentDate == 0)
+        //End of date 
+        else if (pointer == 49 && choice.currentDate == 0)
         {
             Debug.Log("Game over");
             //gameObject.SetActive(false);
@@ -47,22 +48,14 @@ public class DailogEvents : MonoBehaviour
             // sets current date to second date dailog
             choice.currentDate = 1;
             choice.pointer = 1;
-            
-            // bus-kun 
+
+            //testing purpose put scene end here
+            overview.active = false;
+            // bus-kun  put some sort of delay here
+            //choice.GrabText();
         }
 
         //DATE B DAILOG STUFF
-        else if (pointer == 37 && choice.currentDate == 1)
-        {
-            Debug.Log("Game over");
-            //gameObject.SetActive(false);
-
-            // sets current date to second date dailog
-            choice.currentDate = 1;
-            choice.pointer = 1;
-            // bus-kun  put some sort of delay here
-            choice.GrabText();
-        }
 
 
         //DATE C DAILOG STUFF
