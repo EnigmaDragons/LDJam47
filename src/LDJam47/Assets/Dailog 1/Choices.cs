@@ -187,9 +187,11 @@ public class Choices : MonoBehaviour
             .Replace("DATE", "Robin")
             .Replace("player", playerName)
             .Replace("Robbin", "Robin");
-        for (int i = 0; i < tempChoice[0].Length; i += 3)
+        for (int i = 0; i < tempChoice[0].Length; i++)
         {
             string choiceHold = tempChoice[0][i].ToString();
+
+
             dailog.text += choiceHold;
             yield return new WaitForSecondsRealtime(typeSpeed);
         }
