@@ -85,7 +85,15 @@ public class DailogEvents : MonoBehaviour
         else if (pointer == 50 && choice.currentDate == 0)
         {
             // Fade To Black or Bus Crash Here
-            sceneLoader.LoadSceneByName("BusScene");
+       
+            //sceneLoader.LoadSceneByName("BusScene");
+            choice.pointer = 1;
+            choice.currentDate = 1;
+
+
+            sceneLoader.FadeFromBlack();
+
+            choice.GrabText();
         }
         // End of date 1
         else if (pointer == 56 && choice.currentDate == 0)
