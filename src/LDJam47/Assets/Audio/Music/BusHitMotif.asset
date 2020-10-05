@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2cd7c3672a89964589361a843fb5884, type: 3}
-  m_Name: DatingGameDinnerTheme-WithSolo
+  m_Name: BusHitMotif
   m_EditorClassIdentifier: 
   volume: 1
   pitch: 1
-  audioClip: {fileID: 8300000, guid: 8e9f4198e2e0bc24d9258bd7bab44417, type: 3}
-  introBoundary: 17.807
-  loopingBoundary: 195.518
-  nonLooping: 0
+  audioClip: {fileID: 8300000, guid: d729f99bcaeb9924489bb2427c12f6cc, type: 3}
+  introBoundary: 0
+  loopingBoundary: 0
+  nonLooping: 1
   loopWholeAudio: 0
