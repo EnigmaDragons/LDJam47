@@ -195,23 +195,18 @@ public class Choices : MonoBehaviour
             yield return new WaitForSecondsRealtime(typeSpeed);
         }
         */
-        for (int i = 0; i < tempChoice[0].Length; i++)
+        for (int i = 0; i < tempChoice[0].Length; i += 4)
         {
-            string tempStuff = tempChoice[0][i].ToString();
-            /*
+            string tempString = tempChoice[0][i].ToString();
+
+            // tries to each line until it can'nt then prints what it could.
             try
             {
-                tempStuff += tempChoice[0][i].ToString();
-                dailog.text += tempStuff;
-            }
-            catch
-            {
-
-            }
-            */
-
-            dailog.text += tempStuff;
-            
+                tempString += tempChoice[0][i + 1].ToString();
+                tempString += tempChoice[0][i + 2].ToString();
+                tempString += tempChoice[0][i + 3].ToString();
+            } catch{}
+            dailog.text += tempString;
             yield return new WaitForSecondsRealtime(typeSpeed);
         }
         // enables and finishes up ui. 
