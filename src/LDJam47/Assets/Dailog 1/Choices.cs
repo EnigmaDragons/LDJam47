@@ -181,18 +181,19 @@ public class Choices : MonoBehaviour
         nextChoiceButton.interactable = false;
         // reests dialog
         dailog.text = "";
-        // fancy smancy text crawl;
-        foreach (char item in tempChoice[0]
+
+        tempChoice[0] = tempChoice[0]
             .Replace("PLAYER_NAME", playerName)
             .Replace("Player", playerName)
             .Replace("DATE", "Robin")
             .Replace("player", playerName)
-            .Replace("Robbin", "Robin"))
+            .Replace("Robbin", "Robin");
+        for (int i = 0; i < tempChoice[0].Length; i++)
         {
-            dailog.text += item;
+            dailog.text += tempChoice[0][i];
             yield return new WaitForSecondsRealtime(typeSpeed);
         }
-
+        
         // enables and finishes up ui. 
         SetUi(tempChoice);
     }
