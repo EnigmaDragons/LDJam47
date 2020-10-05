@@ -665,6 +665,7 @@ MonoBehaviour:
   - {fileID: 544282762201882268}
   - {fileID: 3674496966695965473}
   - {fileID: 1740055333365521399}
+  nextChoiceButton: {fileID: 4659951055678869905}
   dailog: {fileID: 0}
   choiceHold: {fileID: 5254452832382392788}
   pointerList: 

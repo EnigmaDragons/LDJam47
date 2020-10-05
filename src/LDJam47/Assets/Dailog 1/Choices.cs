@@ -17,6 +17,7 @@ public class Choices : MonoBehaviour
     public string dateName;
     public float typeSpeed;
     public TextButton[] buttons;
+    public Button nextChoiceButton;
     [HideInInspector] public TextMeshProUGUI dailog;
 
     private TextMeshProUGUI choice1;
@@ -33,16 +34,11 @@ public class Choices : MonoBehaviour
 
     private TextMeshProUGUI choice5;
     private Button choice5Button;
-
-
-    private TextMeshProUGUI nextChoice;
-    private Button nextChoiceButton;
-
+    
     public ChoiceHolder choiceHold;
 
     private string[] tempArray;
     private List<string> tempChoice;
-
 
     // works with button to bring you to the next dailog
     [HideInInspector] public List<int> pointerList;
@@ -86,9 +82,6 @@ public class Choices : MonoBehaviour
         buttonList = new List<Button> { choice1Button, choice2Button, choice3Button, choice4Button, choice5Button };
 
         dailogE = GameObject.Find("Overview").GetComponent<DailogEvents>();
-
-        nextChoice = GameObject.Find("nextChoice").GetComponentInChildren<TextMeshProUGUI>();
-        nextChoiceButton = GameObject.Find("nextChoice").GetComponent<Button>();
 
         dateList = new List<List<string>> { choiceHold.dateA, choiceHold.dateB, choiceHold.dateC };
         //Begins dailog system
