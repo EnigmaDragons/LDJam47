@@ -85,21 +85,42 @@ public class DailogEvents : MonoBehaviour
         }
 
         //DATE B DAILOG STUFF
-        else if ((pointer == 1) && choice.currentDate == 1)
+        else if ((pointer == 0) && choice.currentDate == 1)
         {
             sceneLoader.FadeFromBlack();
             choice.GrabText();
         }
-        // End of date 2
-        else if ((pointer == 15) && choice.currentDate == 1) // 50 will change
+        else if ((pointer == 43) && choice.currentDate == 1)
         {
-            // Have date get angry and super leave yo
+            // Have date get angry and walk out
+            dateCharacterController.ChangeFacialExpression("Angry");
+            dateCharacterController.SetTrigger("walkTrigger");
+            dateCharacterController.MoveCharacter(
+                dateCharacterController.startingPos,
+                dateCharacterController.walkOutPos,
+                1f
+            );
+
+            // Fade To Black or Bus Crash Here
+            sceneLoader.FadeToBlack();
+
+            // Deactivate text progression
+            // Play bus crash sound (a few seconds after?)
+            // Activate text progression after sound finishes playing
+
             choice.GrabText();
         }
-        else if ((pointer == 16) && choice.currentDate == 1) // 50 will change
+        // End of date 2
+        else if ((pointer == 50) && choice.currentDate == 1)
         {
-            // Fade to Black
-            choice.GrabText();
+            // sets current date to second date dailog
+            choice.currentDate = 1;
+            choice.pointer = 1;
+
+            //testing purpose put scene end here
+            overview.active = false;
+            // bus-kun  put some sort of delay here
+            //choice.GrabText();
         }
 
         //DATE C DAILOG STUFF
