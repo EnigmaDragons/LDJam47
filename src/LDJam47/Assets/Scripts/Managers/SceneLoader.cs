@@ -59,17 +59,23 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadSceneByNameCoroutine(sceneName));
     }
 
-   
+    public void FadeToBlack() => transitionAnimator.SetTrigger("fadeToBlack");
+
+    public void FadeFromBlack() => transitionAnimator.SetTrigger("fadeFromBlack");
+
+
     IEnumerator LoadSceneCoroutine(int buildIndex)
     {
-        transitionAnimator.SetTrigger("loadLevel");     
+        Debug.Log("Loading Scene");
+        FadeToBlack();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(buildIndex);
     }
 
     IEnumerator LoadSceneByNameCoroutine(string sceneName)
     {
-        transitionAnimator.SetTrigger("loadLevel");    
+        Debug.Log("Loading Scene");
+        FadeToBlack();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneName);
     }

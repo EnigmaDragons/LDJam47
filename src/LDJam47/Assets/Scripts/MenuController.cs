@@ -68,6 +68,7 @@ namespace SpeedTutorMainMenuSystem
             menuNumber = 1;
 
             sceneLoader = SceneLoader.SceneLoaderInstance;
+            sceneLoader.FadeFromBlack();
         }
         #endregion
 
