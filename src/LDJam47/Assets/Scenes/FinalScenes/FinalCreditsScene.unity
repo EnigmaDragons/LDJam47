@@ -637,5 +637,9 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2116762092486965127, guid: b4f9602b2483ff54cb7517f8d1e83063, type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 110447050}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4f9602b2483ff54cb7517f8d1e83063, type: 3}
