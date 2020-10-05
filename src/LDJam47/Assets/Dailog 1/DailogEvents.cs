@@ -44,12 +44,11 @@ public class DailogEvents : MonoBehaviour
             dateCharacterController.SetTrigger("sitDownTrigger");
             dateCharacterController.ChangeFacialExpression("Happy");
         }
-        else if (pointer == 5 && choice.currentDate == 0)
+        else if (pointer == 4 && choice.currentDate == 0)
         {
             sceneLoader.FadeFromBlack();
             choice.GrabText();
         }
-        //End of date 
         else if ((pointer == 47 || pointer == 48 || pointer == 49) && choice.currentDate == 0)
         {
             Debug.Log("Game over");
@@ -59,12 +58,8 @@ public class DailogEvents : MonoBehaviour
             // Play bus crash sound (a few seconds after?)
             // Activate text progression after sound finishes playing
 
-            // sets current date to second date dailog
-            choice.currentDate = 1;
-            choice.pointer = 1;
-
             //testing purpose put scene end here
-            overview.active = false;
+            //overview.active = false;
             // bus-kun  put some sort of delay here
             //choice.GrabText();
 
@@ -76,19 +71,25 @@ public class DailogEvents : MonoBehaviour
                 dateCharacterController.walkOutPos,
                 1f
             );
+            choice.GrabText();
         }
-
         else if (pointer == 50 && choice.currentDate == 0)
         {
             // Fade To Black or Bus Crash Here
             sceneLoader.FadeToBlack();
+        }
+        // End of date 1
+        else if (pointer == 57 && choice.currentDate == 0)
+        {
+            // Switch Dates Here
+            StartCoroutine(GoToDate(1));
         }
 
         //DATE B DAILOG STUFF
         else if ((pointer == 0) && choice.currentDate == 1)
         {
             sceneLoader.FadeFromBlack();
-            choice.GrabText();
+            //choice.GrabText();
         }
         else if ((pointer == 43) && choice.currentDate == 1)
         {
@@ -101,14 +102,9 @@ public class DailogEvents : MonoBehaviour
                 1f
             );
 
-            // Fade To Black or Bus Crash Here
-            sceneLoader.FadeToBlack();
+            StartCoroutine(GoToBusScene());
 
-            // Deactivate text progression
-            // Play bus crash sound (a few seconds after?)
-            // Activate text progression after sound finishes playing
-
-            choice.GrabText();
+            //choice.GrabText();
         }
         // End of date 2
         else if ((pointer == 50) && choice.currentDate == 1)
@@ -150,5 +146,43 @@ public class DailogEvents : MonoBehaviour
         {
             choice.GrabText();
         }
+    }
+
+    private IEnumerator GoToDate(int dateNumber)
+    {
+        // Deactivate text progression
+        overview.SetActive(false);
+
+        // Fade To Black
+        sceneLoader.FadeToBlack();
+
+        // Reset Pointer and Move to Next Date
+        choice.pointer = 0;
+        choice.currentDate = dateNumber;
+        yield return new WaitForSeconds(1f); // duration of the fade
+
+        // Fade To Black
+        sceneLoader.FadeToBlack();
+        yield return new WaitForSeconds(1f); // duration of the fade
+
+        // Reactivate text progression
+        overview.SetActive(true);
+    }
+
+    private IEnumerator GoToBusScene()
+    {
+        // Fade To Black
+        sceneLoader.FadeToBlack();
+        yield return new WaitForSeconds(1f); // duration of the fade
+
+        // Deactivate text progression
+        overview.SetActive(false);
+
+        // Bus Stuff here
+        // TODO: Play bus crash sound
+        yield return new WaitForSeconds(3f);
+
+        // Activate text progression after sound finishes playing
+        overview.SetActive(true);
     }
 }
