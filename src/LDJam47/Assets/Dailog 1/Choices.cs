@@ -5,7 +5,6 @@ using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
-using UnityEditor;
 using System.Collections;
 
 public class Choices : MonoBehaviour
@@ -43,7 +42,7 @@ public class Choices : MonoBehaviour
     // works with button to bring you to the next dailog
     [HideInInspector] public List<int> pointerList;
     // pointer will bring you that number dialog so 3 will bring you to the third dialog option
-    public int pointer = 37;
+    public int pointer = 1;
 
     public DailogEvents dailogE;
     //used for togglein the aviabilty of choices
@@ -84,6 +83,7 @@ public class Choices : MonoBehaviour
         dailogE = GameObject.Find("Overview").GetComponent<DailogEvents>();
 
         dateList = new List<List<string>> { choiceHold.dateA, choiceHold.dateB, choiceHold.dateC };
+        
         //Begins dailog system
         GrabText();
     }
@@ -188,12 +188,27 @@ public class Choices : MonoBehaviour
             .Replace("DATE", "Robin")
             .Replace("player", playerName)
             .Replace("Robbin", "Robin");
-        for (int i = 0; i < tempChoice[0].Length; i++)
+        /*
+        foreach (var item in tempChoice[0])
         {
-            dailog.text += tempChoice[0][i];
+            dailog.text += item;
             yield return new WaitForSecondsRealtime(typeSpeed);
         }
-        
+        */
+        for (int i = 0; i < tempChoice[0].Length; i += 4)
+        {
+            string tempString = tempChoice[0][i].ToString();
+
+            // tries to each line until it can'nt then prints what it could.
+            try
+            {
+                tempString += tempChoice[0][i + 1].ToString();
+                tempString += tempChoice[0][i + 2].ToString();
+                tempString += tempChoice[0][i + 3].ToString();
+            } catch{}
+            dailog.text += tempString;
+            yield return new WaitForSecondsRealtime(typeSpeed);
+        }
         // enables and finishes up ui. 
         SetUi(tempChoice);
     }
