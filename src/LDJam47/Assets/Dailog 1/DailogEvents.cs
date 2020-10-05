@@ -85,14 +85,20 @@ public class DailogEvents : MonoBehaviour
         else if (pointer == 50 && choice.currentDate == 0)
         {
             // Fade To Black or Bus Crash Here
-            sceneLoader.FadeToBlack();
-            choice.GrabText();
+            sceneLoader.LoadSceneByName("BusScene");
         }
         // End of date 1
         else if (pointer == 56 && choice.currentDate == 0)
         {
             // Switch Dates Here
-            StartCoroutine(GoToDate(1));
+            // StartCoroutine(GoToDate(1));
+            choice.pointer = 1;
+            choice.currentDate = 1;
+
+            
+            sceneLoader.FadeFromBlack();
+            
+            choice.GrabText();
         }
 
         //DATE B DAILOG STUFF
@@ -118,8 +124,13 @@ public class DailogEvents : MonoBehaviour
         // End of date 2
         else if ((pointer == 48) && choice.currentDate == 1)
         {
-            StartCoroutine(GoToDate(2));
-            choice.GrabText();
+           // choice.pointer = 1;
+           // choice.currentDate = 2;
+
+
+            sceneLoader.LoadSceneByName("BusScene");
+
+            //choice.GrabText();
         }
 
         //DATE C DAILOG STUFF
@@ -161,7 +172,7 @@ public class DailogEvents : MonoBehaviour
         //choice.enabled = false;
 
         // Fade To Black
-        yield return new WaitForSeconds(2f); // duration of the fade
+        //yield return new WaitForSeconds(2f); // duration of the fade
 
         // Fade To Black
         sceneLoader.FadeFromBlack();
