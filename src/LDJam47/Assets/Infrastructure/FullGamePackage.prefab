@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70a64aadd044ec8855c8e23db761393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 11400000, guid: 194c421576af0634f8dfe6cfd4761bf5, type: 2}
+  music: {fileID: 11400000, guid: 872dd9a48e923d14faea4c48b081c256, type: 2}
   musicPlayer: {fileID: 11400000, guid: 2d09577cb1193934285185380016eb2c, type: 2}
 --- !u!1 &8689591415368560500
 GameObject:
