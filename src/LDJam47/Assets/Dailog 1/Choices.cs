@@ -17,7 +17,7 @@ public class Choices : MonoBehaviour
     public string dateName;
     public float typeSpeed;
     public TextButton[] buttons;
-    [HideInInspector]public TextMeshProUGUI dailog;
+    [HideInInspector] public TextMeshProUGUI dailog;
 
     private TextMeshProUGUI choice1;
     private Button choice1Button;
@@ -34,6 +34,10 @@ public class Choices : MonoBehaviour
     private TextMeshProUGUI choice5;
     private Button choice5Button;
 
+
+    private TextMeshProUGUI nextChoice;
+    private Button nextChoiceButton;
+
     public ChoiceHolder choiceHold;
 
     private string[] tempArray;
@@ -41,7 +45,7 @@ public class Choices : MonoBehaviour
 
 
     // works with button to bring you to the next dailog
-    [HideInInspector]public List<int> pointerList;
+    [HideInInspector] public List<int> pointerList;
     // pointer will bring you that number dialog so 3 will bring you to the third dialog option
     public int pointer = 37;
 
@@ -60,19 +64,19 @@ public class Choices : MonoBehaviour
 
         if (buttons.Length < 5)
             Debug.Log("Need 5 buttons");
-        
+
         choice1 = buttons[0].text;
         choice1Button = buttons[0].button;
 
         choice2 = buttons[1].text;
         choice2Button = buttons[1].button;
-        
+
         choice3 = buttons[2].text;
         choice3Button = buttons[2].button;
-        
+
         choice4 = buttons[3].text;
         choice4Button = buttons[3].button;
-        
+
         choice5 = buttons[4].text;
         choice5Button = buttons[4].button;
 
@@ -83,6 +87,9 @@ public class Choices : MonoBehaviour
 
         dailogE = GameObject.Find("Overview").GetComponent<DailogEvents>();
 
+        nextChoice = GameObject.Find("nextChoice").GetComponentInChildren<TextMeshProUGUI>();
+        nextChoiceButton = GameObject.Find("nextChoice").GetComponent<Button>();
+
         dateList = new List<List<string>> { choiceHold.dateA, choiceHold.dateB, choiceHold.dateC };
         //Begins dailog system
         GrabText();
@@ -91,9 +98,17 @@ public class Choices : MonoBehaviour
     public void NextConvo()
     {
         // Find next pointer from button daialog and will bring the player there
+        Debug.Log("fired");
         if (EventSystem.current.currentSelectedGameObject != null)
         {
-            pointer = pointerList[(Int32.Parse((EventSystem.current.currentSelectedGameObject.name).Replace("Choice", "")) - 1)];
+            if (EventSystem.current.currentSelectedGameObject.name == "nextChoice")
+            {
+                pointer = pointerList[0];
+            }
+            else
+            {
+                pointer = pointerList[(Int32.Parse((EventSystem.current.currentSelectedGameObject.name).Replace("Choice", "")) - 1)];
+            }
         }
         //runs grabtext again to keep the game going.
         dailogE.NextEvent(pointer);
@@ -137,31 +152,40 @@ public class Choices : MonoBehaviour
     {
         tempChoice = displayChoices;
 
-        //uses list and sets everything up so it looks nice 
-        choice1.SetText(tempChoice[1].Split('#')[0].Replace("ComA", " ,"));
-        choice2.SetText(tempChoice[2].Split('#')[0].Replace("ComA", " ,"));
-        choice3.SetText(tempChoice[3].Split('#')[0].Replace("ComA", " ,"));
-        choice4.SetText(tempChoice[4].Split('#')[0].Replace("ComA", " ,"));
-        choice5.SetText(tempChoice[5].Split('#')[0].Replace("ComA", " ,"));
-
-        // enables relavent buttons
-        int i = 0;
-        foreach (Button item in buttonList)
+        if (tempArray.Length == 2)
         {
+            nextChoiceButton.interactable = true;
+        }
+        else
+        {
+            nextChoiceButton.interactable = false;
+            //uses list and sets everything up so it looks nice 
+            choice1.SetText(tempChoice[1].Split('#')[0].Replace("ComA", " ,"));
+            choice2.SetText(tempChoice[2].Split('#')[0].Replace("ComA", " ,"));
+            choice3.SetText(tempChoice[3].Split('#')[0].Replace("ComA", " ,"));
+            choice4.SetText(tempChoice[4].Split('#')[0].Replace("ComA", " ,"));
+            choice5.SetText(tempChoice[5].Split('#')[0].Replace("ComA", " ,"));
 
-            if (textList[i].text == "")
+            // enables relavent buttons
+            int i = 0;
+            foreach (Button item in buttonList)
             {
-                item.interactable = false;
+
+                if (textList[i].text == "")
+                {
+                    item.interactable = false;
+                }
+                else
+                {
+                    item.interactable = true;
+                }
+                i++;
             }
-            else
-            {
-                item.interactable = true;
-            }
-            i++;
         }
     }
     IEnumerator DailogScroll()
     {
+        nextChoiceButton.interactable = false;
         // reests dialog
         dailog.text = "";
         // fancy smancy text crawl;

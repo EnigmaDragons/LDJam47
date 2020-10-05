@@ -1012,6 +1012,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1099573292}
     m_Modifications:
+    - target: {fileID: 945665297945232726, guid: f0c509711e11642409a0c7403d04df04, type: 3}
+      propertyPath: m_Name
+      value: choiceNext
+      objectReference: {fileID: 0}
     - target: {fileID: 4645906182285179672, guid: f0c509711e11642409a0c7403d04df04, type: 3}
       propertyPath: m_Name
       value: DialogueView2
