@@ -7,6 +7,7 @@ public class CharacterAnimationController : MonoBehaviour
     [Header("Position she would go to at the start of the date.")]
     public Vector3 walkInPos = Vector3.zero;
     public Vector3 startingPos = Vector3.zero;
+    public Vector3 walkOutPos = Vector3.zero;
 
     // Cached Components
     Animator animator = null;
@@ -36,7 +37,6 @@ public class CharacterAnimationController : MonoBehaviour
         switch (expressionName)
         {
             case "Happy":
-                Debug.Log(facialExpressions[0]);
                 facialExpressionRenderer.sprite = facialExpressions[0];
                 break;
             case "Angry":

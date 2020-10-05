@@ -55,6 +55,15 @@ public class DailogEvents : MonoBehaviour
             overview.active = false;
             // bus-kun  put some sort of delay here
             //choice.GrabText();
+
+            // Have date walk out
+            dateCharacterController.ChangeFacialExpression("Angry");
+            dateCharacterController.SetTrigger("walkTrigger");
+            dateCharacterController.MoveCharacter(
+                dateCharacterController.startingPos,
+                dateCharacterController.walkOutPos,
+                1f
+            );
         }
 
         //DATE B DAILOG STUFF
