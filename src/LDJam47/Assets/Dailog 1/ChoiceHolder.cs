@@ -112,7 +112,7 @@ public class ChoiceHolder : MonoBehaviour
             "PLAYER_NAME: I was already on the line with 911 before I got outside. = next #47",
             "PLAYER_NAME: But the scene was the same as the image burned into my mind. = next #48",
 
-            "Player: This is all my fault.",
+            "PLAYER_NAME: This is all my fault. = next #50",
         };
 
         dateC = new List<string>
