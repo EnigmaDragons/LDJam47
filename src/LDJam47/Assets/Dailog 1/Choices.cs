@@ -42,7 +42,7 @@ public class Choices : MonoBehaviour
     // works with button to bring you to the next dailog
     [HideInInspector] public List<int> pointerList;
     // pointer will bring you that number dialog so 3 will bring you to the third dialog option
-    public int pointer = 37;
+    public int pointer = 1;
 
     public DailogEvents dailogE;
     //used for togglein the aviabilty of choices
@@ -83,8 +83,9 @@ public class Choices : MonoBehaviour
         dailogE = GameObject.Find("Overview").GetComponent<DailogEvents>();
 
         dateList = new List<List<string>> { choiceHold.dateA, choiceHold.dateB, choiceHold.dateC };
+        
         //Begins dailog system
-        //GrabText();
+        GrabText();
     }
 
     public void NextConvo()
@@ -196,7 +197,21 @@ public class Choices : MonoBehaviour
         */
         for (int i = 0; i < tempChoice[0].Length; i++)
         {
-            dailog.text += tempChoice[0][i];
+            string tempStuff = tempChoice[0][i].ToString();
+            /*
+            try
+            {
+                tempStuff += tempChoice[0][i].ToString();
+                dailog.text += tempStuff;
+            }
+            catch
+            {
+
+            }
+            */
+
+            dailog.text += tempStuff;
+            
             yield return new WaitForSecondsRealtime(typeSpeed);
         }
         // enables and finishes up ui. 

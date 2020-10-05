@@ -88,7 +88,7 @@ public class DailogEvents : MonoBehaviour
         else if ((pointer == 0) && choice.currentDate == 1)
         {
             sceneLoader.FadeFromBlack();
-            choice.GrabText();
+            //choice.GrabText();
         }
         else if ((pointer == 43) && choice.currentDate == 1)
         {
@@ -108,7 +108,7 @@ public class DailogEvents : MonoBehaviour
             // Play bus crash sound (a few seconds after?)
             // Activate text progression after sound finishes playing
 
-            choice.GrabText();
+            //choice.GrabText();
         }
         // End of date 2
         else if ((pointer == 50) && choice.currentDate == 1)
