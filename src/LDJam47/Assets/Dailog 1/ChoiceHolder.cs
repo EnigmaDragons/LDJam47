@@ -10,7 +10,7 @@ public class ChoiceHolder : MonoBehaviour
     public void Awake()
     {
         dateA = new List<string>
-        {
+        { 
            "PLAYER_NAME: No matter how polite I am, how many doors I hold open, how many dates I compliment they just don’t have the ability to keep up with me. = next #2",
            "PLAYER_NAME: Being both a line chef and a motorbike stunt driver… Well it intimidates a lot of people. = next #3",
            "PLAYER_NAME: But finally my cousin Tim set me up with one of his sister’s friends. = next #4",
@@ -60,6 +60,14 @@ public class ChoiceHolder : MonoBehaviour
            "PLAYER_NAME: Hey it's not my fault they screwed up our orders. = next #50",
            "PLAYER_NAME: What are you talking about? Don’t go. They just said our drinks were about to get here. = next #50",
            "PLAYER_NAME: I’m an ass? At least I’m not some boring bitch that orders water on Friday night. = next #50",
+           "PLAYER_NAME: The fuck was that? = next #51",
+           "PLAYER_NAME: I call 911 as fast as I can. = next #52",
+           "PLAYER_NAME: Minutes later, I watch as they carry her body away. = next #53",
+           "PLAYER_NAME: If that idiot waiter had just brought us our drinks none of this would have happened. = next #54",
+           "PLAYER_NAME: I go back into the restaurant to get an apology from that dumbass and they fucking kick me out. = next #55",
+           "PLAYER_NAME: Robin was just laying there. = next #56",
+           "PLAYER_NAME: I feel sick. = next #57",
+           "PLAYER_NAME: The image keeps playing back over and over in my head. Over and over and over and over and over..."
         };
 
         dateB = new List<string>
@@ -111,8 +119,7 @@ public class ChoiceHolder : MonoBehaviour
             "PLAYER_NAME: But when I heard that sound my instincts took over. = next #46",
             "PLAYER_NAME: I was already on the line with 911 before I got outside. = next #47",
             "PLAYER_NAME: But the scene was the same as the image burned into my mind. = next #48",
-
-            "PLAYER_NAME: This is all my fault. = next #50",
+            "PLAYER_NAME: This is all my fault. = next #49",
             ""
         };
 
