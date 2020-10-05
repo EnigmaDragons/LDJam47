@@ -25,6 +25,7 @@ public class SceneLoader : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        transitionAnimator = GetComponentInChildren<Animator>();
     }
 
     #endregion Singleton
@@ -32,11 +33,16 @@ public class SceneLoader : MonoBehaviour
     // Cached Components
     Animator transitionAnimator;
 
-    private void Start()
+    private Animator Animator
     {
-        transitionAnimator = GetComponentInChildren<Animator>();
+        get
+        {
+            if (transitionAnimator == null)
+                transitionAnimator = GetComponentInChildren<Animator>();
+            return transitionAnimator;
+        }
     }
-
+    
     public void ReloadScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -59,9 +65,9 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadSceneByNameCoroutine(sceneName));
     }
 
-    public void FadeToBlack() => transitionAnimator.SetTrigger("fadeToBlack");
+    public void FadeToBlack() => Animator.SetTrigger("fadeToBlack");
 
-    public void FadeFromBlack() => transitionAnimator.SetTrigger("fadeFromBlack");
+    public void FadeFromBlack() => Animator.SetTrigger("fadeFromBlack");
 
 
     IEnumerator LoadSceneCoroutine(int buildIndex)
@@ -75,7 +81,7 @@ public class SceneLoader : MonoBehaviour
     IEnumerator LoadSceneByNameCoroutine(string sceneName)
     {
         Debug.Log("Loading Scene");
-        //FadeToBlack();
+        FadeToBlack();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneName);
     }
@@ -84,5 +90,4 @@ public class SceneLoader : MonoBehaviour
     {
         Application.Quit();
     }
-
 }

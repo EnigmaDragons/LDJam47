@@ -14,12 +14,12 @@ public class CreditsPresenter : MonoBehaviour
 
     private void Start()
     {
-        onStart.Invoke();
         StartCoroutine(ShowNext());
     }
     
     private IEnumerator ShowNext()
     {
+        onStart.Invoke();
         yield return new WaitForSeconds(delayBeforeStart);
         
         for (var i = 0; i < allCredits.Credits.Length; i++)
