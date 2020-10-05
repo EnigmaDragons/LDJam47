@@ -51,7 +51,12 @@ public class DailogEvents : MonoBehaviour
         }
         else if (pointer == 45 && choice.currentDate == 0)
         {
-            sceneLoader.FadeFromBlack();
+            dateCharacterController.ChangeFacialExpression("Angry");
+            dateCharacterController.MoveCharacter(
+                dateCharacterController.transform.localPosition,
+                dateCharacterController.walkOutPos,
+                1f
+            );
             choice.GrabText();
         }
         else if ((pointer == 46 || pointer == 47 || pointer == 48) && choice.currentDate == 0)
@@ -70,9 +75,8 @@ public class DailogEvents : MonoBehaviour
 
             // Have date get angry and walk out
             dateCharacterController.ChangeFacialExpression("Angry");
-            dateCharacterController.SetTrigger("walkTrigger");
             dateCharacterController.MoveCharacter(
-                dateCharacterController.startingPos,
+                dateCharacterController.transform.localPosition,
                 dateCharacterController.walkOutPos,
                 1f
             );
@@ -101,7 +105,6 @@ public class DailogEvents : MonoBehaviour
         {
             // Have date get angry and walk out
             dateCharacterController.ChangeFacialExpression("Angry");
-            dateCharacterController.SetTrigger("walkTrigger");
             dateCharacterController.MoveCharacter(
                 dateCharacterController.startingPos,
                 dateCharacterController.walkOutPos,
@@ -155,7 +158,7 @@ public class DailogEvents : MonoBehaviour
         choice.currentDate = dateNumber;
 
         // Deactivate text progression
-        choice.enabled = false;
+        //choice.enabled = false;
 
         // Fade To Black
         yield return new WaitForSeconds(2f); // duration of the fade
@@ -165,7 +168,7 @@ public class DailogEvents : MonoBehaviour
         yield return new WaitForSeconds(1f); // duration of the fade
 
         // Reactivate text progression
-        choice.enabled = true;
+        //choice.enabled = true;
         choice.GrabText();
     }
 
