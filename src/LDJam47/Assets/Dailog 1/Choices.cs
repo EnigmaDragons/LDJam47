@@ -190,7 +190,7 @@ public class Choices : MonoBehaviour
             .Replace("Robbin", "Robin"))
         {
             dailog.text += item;
-            yield return new WaitForSeconds(typeSpeed);
+            yield return new WaitForSecondsRealtime(typeSpeed);
         }
 
         // enables and finishes up ui. 
