@@ -8,6 +8,8 @@ public class DailogEvents : MonoBehaviour
     private Vector2 origin;
     public int pointer;
     private Choices choice;
+    private int currentBad;
+    public int maxBad = 5;
 
     // Character Animation Controllers
     CharacterAnimationController dateCharacterController = null;
@@ -59,17 +61,22 @@ public class DailogEvents : MonoBehaviour
 
 
         //DATE C DAILOG STUFF
-        else if (pointer == 42 && choice.currentDate == 2)
+        else if ((pointer == 1 || pointer == 2 || pointer == 3) && choice.currentDate == 2)
         {
-            Debug.Log("Game over");
-            //gameObject.SetActive(false);
+            maxBad += 1;
 
-            // sets current date to second date dailog
-            choice.currentDate = 1;
-            choice.pointer = 1;
-
-            // bus-kun  put some sort of delay here
-            choice.GrabText();
+            if (currentBad >= maxBad)
+            {
+                //Jumps to bad ending
+                choice.pointer = 50;
+                
+                choice.GrabText();
+            }
+            else
+            {
+                // not enough bad keep playing game
+                choice.GrabText();
+            }
         }
 
         else
