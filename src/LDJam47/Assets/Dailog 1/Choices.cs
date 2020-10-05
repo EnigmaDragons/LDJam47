@@ -5,7 +5,6 @@ using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
-using UnityEditor;
 using System.Collections;
 
 public class Choices : MonoBehaviour
@@ -188,9 +187,14 @@ public class Choices : MonoBehaviour
             .Replace("DATE", "Robin")
             .Replace("player", playerName)
             .Replace("Robbin", "Robin");
-        for (int i = 0; i < tempChoice[0].Length; i++)
+        for (int i = 0; i < tempChoice[0].Length; i += 3)
         {
-            dailog.text += tempChoice[0][i];
+            string choiceHold = 
+                tempChoice[0][i].ToString()
+                + tempChoice[0][i+1].ToString()
+                + tempChoice[0][i + 2].ToString();
+
+            dailog.text += choiceHold;
             yield return new WaitForSecondsRealtime(typeSpeed);
         }
         
