@@ -112,8 +112,13 @@ public class DailogEvents : MonoBehaviour
         //DATE B DAILOG STUFF
         else if ((pointer == 0) && choice.currentDate == 1)
         {
-            //sceneLoader.FadeFromBlack();
-            //choice.GrabText();
+            dateCharacterController.MoveCharacter(
+                 dateCharacterController.walkOutPos,
+                 dateCharacterController.startingPos,
+                 1f
+             );
+            sceneLoader.FadeFromBlack();
+            choice.GrabText();
         }
         else if ((pointer == 43) && choice.currentDate == 1)
         {
@@ -144,7 +149,12 @@ public class DailogEvents : MonoBehaviour
         //DATE C DAILOG STUFF
         else if ((pointer == 1) && choice.currentDate == 2)
         {
-            //sceneLoader.FadeFromBlack();
+            sceneLoader.FadeFromBlack();
+            dateCharacterController.MoveCharacter(
+                 dateCharacterController.walkOutPos,
+                 dateCharacterController.startingPos,
+                 1f
+             );
         }
         else if ((pointer == 43 || pointer == 42) && choice.currentDate == 2)
         {
