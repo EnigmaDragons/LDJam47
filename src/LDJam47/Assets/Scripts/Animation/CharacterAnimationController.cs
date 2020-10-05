@@ -50,15 +50,11 @@ public class CharacterAnimationController : MonoBehaviour
 
     IEnumerator MoveCharacterTo(Vector3 origin, Vector3 destination, float duration)
     {
-        SetTrigger("walkTrigger");
-
         for (float t = 0f; t < duration; t += Time.deltaTime)
         {
             transform.localPosition = Vector3.Lerp(origin, destination, t / duration);
             yield return 0;
         }
         transform.position = destination;
-
-        SetTrigger("standingTrigger");
     }
 }
