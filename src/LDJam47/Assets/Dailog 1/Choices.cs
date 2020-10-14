@@ -58,6 +58,17 @@ public class Choices : MonoBehaviour
         dailog = GameObject.Find("Dialog").GetComponent<TextMeshProUGUI>();
 
         // grabs pointer from playerprefs
+        //____________________________________________________________________
+        //____________________________________________________________________
+        // kills after testing    the game should work with out a hitch during normal play experince
+        PlayerPrefs.SetInt("Pointer", pointer);
+
+        //tempt delete later
+        PlayerPrefs.SetInt("Date", 0);
+
+        //____________________________________________________________________
+        //____________________________________________________________________
+
         pointer = PlayerPrefs.GetInt("Pointer", 1);
         // grabs date from playerprefs
         currentDate = PlayerPrefs.GetInt("Date", 0);

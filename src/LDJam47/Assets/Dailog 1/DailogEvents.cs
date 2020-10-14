@@ -82,13 +82,13 @@ public class DailogEvents : MonoBehaviour
             );
             choice.GrabText();
         }
-        else if (pointer == 50 && choice.currentDate == 0)
+        else if (pointer == 50 || pointer == 49 && choice.currentDate == 0)
         {
-            // Fade To Black or Bus Crash Here
-       
-            //sceneLoader.LoadSceneByName("BusScene");
-            choice.pointer = 1;
-            choice.currentDate = 1;
+            Debug.Log("______________________________________________________look here");
+            //sets data 
+            DateSceneManager();
+            // activate bus scene
+            StartCoroutine(GoToBusScene());
 
 
             sceneLoader.FadeFromBlack();
@@ -98,12 +98,9 @@ public class DailogEvents : MonoBehaviour
         // End of date 1
         else if (pointer == 56 && choice.currentDate == 0)
         {
-            // Switch Dates Here
-            // StartCoroutine(GoToDate(1));
-            choice.pointer = 1;
-            choice.currentDate = 1;
 
-            
+
+
             sceneLoader.FadeFromBlack();
             
             choice.GrabText();
@@ -120,6 +117,7 @@ public class DailogEvents : MonoBehaviour
             sceneLoader.FadeFromBlack();
             choice.GrabText();
         }
+
         else if ((pointer == 43) && choice.currentDate == 1)
         {
             // Have date get angry and walk out
@@ -134,11 +132,14 @@ public class DailogEvents : MonoBehaviour
 
             //choice.GrabText();
         }
+
         // End of date 2
         else if ((pointer == 48) && choice.currentDate == 1)
         {
-            choice.pointer = 1;
-            choice.currentDate = 2;
+            //sets data 
+            DateSceneManager();
+            // activate bus scene
+            GoToBusScene();
 
 
            // sceneLoader.LoadSceneByName("BusScene");
@@ -200,6 +201,9 @@ public class DailogEvents : MonoBehaviour
         sceneLoader.FadeToBlack();
         yield return new WaitForSeconds(1f); // duration of the fade
 
+        Debug.Log("this is running horray___________________________________________________________________");
+
+        sceneLoader.LoadSceneByName("BusScene");
         // Bus Stuff here
         // TODO: Play bus crash sound
         yield return new WaitForSeconds(3f);
@@ -207,5 +211,12 @@ public class DailogEvents : MonoBehaviour
         // Activate text progression after sound finishes playing
         choice.enabled = true;
         choice.GrabText();
+    }
+    // call this when scenes need to transition call before you move to the next scene
+
+    public void DateSceneManager()
+    {
+        PlayerPrefs.SetInt("Pointer", 1);
+        PlayerPrefs.SetInt("Date", choice.currentDate + 1);
     }
 }
