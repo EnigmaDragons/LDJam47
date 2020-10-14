@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DailogEvents : MonoBehaviour
@@ -82,12 +81,14 @@ public class DailogEvents : MonoBehaviour
             );
             choice.GrabText();
         }
+
         else if (pointer == 50 || pointer == 49 && choice.currentDate == 0)
         {
-            Debug.Log("______________________________________________________look here");
+            Debug.Log("______________________________________________________");
             //sets data 
             DateSceneManager();
             // activate bus scene
+
             StartCoroutine(GoToBusScene());
 
 
@@ -206,7 +207,6 @@ public class DailogEvents : MonoBehaviour
         sceneLoader.LoadSceneByName("BusScene");
         // Bus Stuff here
         // TODO: Play bus crash sound
-        yield return new WaitForSeconds(3f);
 
         // Activate text progression after sound finishes playing
         choice.enabled = true;
