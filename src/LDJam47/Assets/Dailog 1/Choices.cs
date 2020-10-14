@@ -57,6 +57,13 @@ public class Choices : MonoBehaviour
         //Prep work 
         dailog = GameObject.Find("Dialog").GetComponent<TextMeshProUGUI>();
 
+        // grabs pointer from playerprefs
+        pointer = PlayerPrefs.GetInt("Pointer", 1);
+        // grabs date from playerprefs
+        currentDate = PlayerPrefs.GetInt("Date", 0);
+
+        //  use to set pointer to be used inbtween scens  PlayerPrefs.SetInt("Pointer", 20);
+
         if (buttons.Length < 5)
             Debug.Log("Need 5 buttons");
 
@@ -117,7 +124,7 @@ public class Choices : MonoBehaviour
             count++;
         }
 
-        //replaces normal english commas with that
+
         tempArray = dateList.VerboseIndex(currentDate, nameof(dateList))[pointer - 1].Split('=');
         pointerList = new List<int>();
 
