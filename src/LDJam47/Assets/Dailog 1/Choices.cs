@@ -69,6 +69,7 @@ public class Choices : MonoBehaviour
         */
         //____________________________________________________________________
         //____________________________________________________________________
+        
 
         pointer = PlayerPrefs.GetInt("Pointer", 1);
         // grabs date from playerprefs
