@@ -17,9 +17,9 @@ public class ChoiceHolder : MonoBehaviour
            "PLAYER_NAME: And knowing how smooth I am with the ladies, this should be a cinch. = next #5", // Player enters scene on #5
            "Robin: Hi PLAYER_NAME, I’m Robin. Nice to meet you. = next #6",
            "PLAYER_NAME: Dang you got here before me? = next #7",
-           "Robin: Well we were supposed to meet here 20 minutes ago. You should plan ahead better next time. = No need to get all sobby on me. We’re here to have fun right? #8 = Geez I’m here for two seconds and you’re already bitching. #9 = Hey if I got to wait around in a place like this I wouldn’t be complaining. Lighten up. #10 ",
+           "Robin: Well we were supposed to meet here 20 minutes ago. You should plan ahead better next time. = No need to get all sobby on me. We’re here to have fun right? #8 = Geez I’m here for two seconds and you’re already complaining. #9 = Hey if I got to wait around in a place like this I wouldn’t be complaining. Lighten up. #10 ",
            "PLAYER_NAME: No need to get all sobby on me. We’re here to have fun right? = next #11",
-           "PLAYER_NAME: Geez I’m here for two seconds and you’re already bitching. = next #11",
+           "PLAYER_NAME: Geez I’m here for two seconds and you’re already complaining. = next #11",
            "PLAYER_NAME: Hey if I got to wait around in a place like this I wouldn’t be complaining. Lighten up. = next #11",
            "Robin: Yeah... sure… = Don’t be mad. Hey waiter! We’ll take two beers. #12 = It’s Friday baby! Hey waiter! A round of tequila shots! #13 = Drinks? Hey waiter! I’m thinking margs for the table. #14",
            "PLAYER_NAME: Don’t be mad. Hey waiter! We’ll take two beers. = next #15",
@@ -59,15 +59,15 @@ public class ChoiceHolder : MonoBehaviour
            "Robin: You know what frack this. This date is over. You know you’re a complete jerk right? = Hey it's not my fault #47 = What are you talking about? #48 = I’m a jerk? #49",
            "PLAYER_NAME: Hey it's not my fault they screwed up our orders. = next #50",
            "PLAYER_NAME: What are you talking about? Don’t go. They just said our drinks were about to get here. = next #50",
-           "PLAYER_NAME: I’m a jerk? At least I’m not some boring bitch that orders water on Friday night. = next #50",
+           "PLAYER_NAME: I’m a jerk? At least I’m not some boring person that orders water on Friday night. = next #50",
            "PLAYER_NAME: The frack was that? = next #51",
-           "PLAYER_NAME: I call 911 as fast as I can. = next #52",
-           "PLAYER_NAME: Minutes later, I watch as they carry her body away. = next #53",
-           "PLAYER_NAME: If that idiot waiter had just brought us our drinks none of this would have happened. = next #54",
-           "PLAYER_NAME: I go back into the restaurant to get an apology from that dummy and they fracking kick me out. = next #55",
-           "PLAYER_NAME: Robin was just laying there. = next #56",
-           "PLAYER_NAME: I feel sick. = next #57",
-           "PLAYER_NAME: The image keeps playing back over and over in my head. Over and over and over and over and over..."
+           "",
+           "",
+           "",
+           "",
+           "",
+           "",
+           ""
         };
 
         dateB = new List<string>
@@ -168,7 +168,7 @@ public class ChoiceHolder : MonoBehaviour
             "Robin: It’s honestly not that hard but this one time when I was getting trained…. [Robin tells you a story about when she was learning to sell houses] = next #44",
             "Robin: Well I did have to do a lot of training so I don’t think anyone could just sell a house. = next #44",
             "Waiter: Here is your food. Enjoy = next #45",
-            "The date continues and you have a wonderful time with Robbin. Afterwards you decided to go out again.",
+            "The date continues and you have a wonderful time with Robbin. Afterwards you decided to go out again. = next #46",
             "",
             "",
             "",
