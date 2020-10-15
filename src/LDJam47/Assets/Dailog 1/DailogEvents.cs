@@ -133,23 +133,22 @@ public class DailogEvents : MonoBehaviour
         }
 
         //DATE C DAILOG STUFF
-        else if ((pointer == 1) && choice.currentDate == 2)
+        else if (pointer == 0 && choice.currentDate == 2)
         {
+            Debug.Log("Date Three Started");
+            // Text fades in here
+
             sceneLoader.FadeFromBlack();
-            dateCharacterController.MoveCharacter(
-                 dateCharacterController.walkOutPos,
-                 dateCharacterController.startingPos,
-                 1f
-             );
+
+            // Have date start already sitting down
+            dateCharacterController.SetTrigger("sitDownTrigger");
+            dateCharacterController.ChangeFacialExpression("Angry");
         }
         else if ((pointer == 43 || pointer == 42) && choice.currentDate == 2)
         {
             Debug.Log("End of date 3 FadeFromBlack test");
             sceneLoader.LoadSceneByName("FinalCreditsScene");
         }
-        
-        
-
         else
         {
             choice.GrabText();
