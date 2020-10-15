@@ -13,7 +13,7 @@ public class ReturnHome : MonoBehaviour
     }
     private IEnumerator GoHome()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(11f);
         sceneLoader.LoadSceneByName("DateScene");
     }
 }
