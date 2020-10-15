@@ -9,9 +9,9 @@ using System.Collections;
 
 public class Choices : MonoBehaviour
 {
-    [Header("       Settings")]
-    [Header("               Choice Opperations")]
-    // will detrimin how fast your date talks.
+    [Header("Settings")]
+    [Header("Choice Opperations")]
+    // will determine how fast your date talks.
     public string playerName;
     public string dateName;
     public float typeSpeed;
