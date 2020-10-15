@@ -70,9 +70,13 @@ public class Choices : MonoBehaviour
         //____________________________________________________________________
         //____________________________________________________________________
         
+
         pointer = PlayerPrefs.GetInt("Pointer", 1);
         // grabs date from playerprefs
         currentDate = PlayerPrefs.GetInt("Date", 0);
+
+       
+        
 
         //  use to set pointer to be used inbtween scens  PlayerPrefs.SetInt("Pointer", 20);
 

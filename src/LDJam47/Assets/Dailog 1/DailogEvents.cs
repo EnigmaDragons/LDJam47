@@ -81,11 +81,12 @@ public class DailogEvents : MonoBehaviour
             );
             choice.GrabText();
         }
-
+        // End of date 1
         else if (pointer == 50 || pointer == 49 && choice.currentDate == 0)
         {
             Debug.Log("______________________________________________________");
             //sets data 
+            
             DateSceneManager();
             // activate bus scene
 
@@ -93,10 +94,7 @@ public class DailogEvents : MonoBehaviour
             choice.GrabText();
         }
         // End of date 1
-        else if (pointer == 56 && choice.currentDate == 0)
-        {       
-            choice.GrabText();
-        }
+        
 
         //DATE B DAILOG STUFF
         else if ((pointer == 0) && choice.currentDate == 1)
@@ -115,21 +113,21 @@ public class DailogEvents : MonoBehaviour
                 1f
             );
 
+            DateSceneManager();
+            // activate bus scene
             StartCoroutine(GoToBusScene());
 
-            //choice.GrabText();
+            choice.GrabText();
         }
 
         // End of date 2
         else if ((pointer == 48) && choice.currentDate == 1)
         {
             //sets data 
-            DateSceneManager();
-            // activate bus scene
-            GoToBusScene();
+            
 
 
-           // sceneLoader.LoadSceneByName("BusScene");
+            // sceneLoader.LoadSceneByName("BusScene");
 
             choice.GrabText();
         }
@@ -202,6 +200,7 @@ public class DailogEvents : MonoBehaviour
 
     public void DateSceneManager()
     {
+        Debug.Log("currentDate:" + choice.currentDate);
         PlayerPrefs.SetInt("Pointer", 1);
         PlayerPrefs.SetInt("Date", choice.currentDate + 1);
     }

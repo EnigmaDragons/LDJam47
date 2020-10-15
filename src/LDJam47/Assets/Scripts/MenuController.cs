@@ -63,7 +63,11 @@ namespace SpeedTutorMainMenuSystem
 
         private void Start()
         {
-	        GoBackToMainMenu();
+            PlayerPrefs.SetInt("Pointer", 1);
+
+            
+            PlayerPrefs.SetInt("Date", 0);
+            GoBackToMainMenu();
 
             menuNumber = 1;
 
