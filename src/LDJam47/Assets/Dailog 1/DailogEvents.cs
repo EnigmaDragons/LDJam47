@@ -101,11 +101,6 @@ public class DailogEvents : MonoBehaviour
         //DATE B DAILOG STUFF
         else if ((pointer == 0) && choice.currentDate == 1)
         {
-            dateCharacterController.MoveCharacter(
-                 dateCharacterController.walkOutPos,
-                 dateCharacterController.startingPos,
-                 1f
-             );
             sceneLoader.FadeFromBlack();
             choice.GrabText();
         }
@@ -190,7 +185,7 @@ public class DailogEvents : MonoBehaviour
         choice.enabled = false;
 
         // Fade To Black
-        sceneLoader.FadeToBlack();
+        //sceneLoader.FadeToBlack();
         yield return new WaitForSeconds(1f); // duration of the fade
 
         Debug.Log("this is running horray___________________________________________________________________");
