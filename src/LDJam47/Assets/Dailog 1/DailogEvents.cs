@@ -41,7 +41,7 @@ public class DailogEvents : MonoBehaviour
 
             // Have date start already sitting down
             dateCharacterController.SetTrigger("sitDownTrigger");
-            dateCharacterController.ChangeFacialExpression("Happy");
+            dateCharacterController.ChangeFacialExpression("Angry");
         }
         else if (pointer == 4 && choice.currentDate == 0)
         {
@@ -90,20 +90,11 @@ public class DailogEvents : MonoBehaviour
             // activate bus scene
 
             StartCoroutine(GoToBusScene());
-
-
-            sceneLoader.FadeFromBlack();
-
             choice.GrabText();
         }
         // End of date 1
         else if (pointer == 56 && choice.currentDate == 0)
-        {
-
-
-
-            sceneLoader.FadeFromBlack();
-            
+        {       
             choice.GrabText();
         }
 
