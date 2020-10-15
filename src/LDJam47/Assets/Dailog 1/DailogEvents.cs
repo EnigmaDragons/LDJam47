@@ -144,7 +144,7 @@ public class DailogEvents : MonoBehaviour
             dateCharacterController.SetTrigger("sitDownTrigger");
             dateCharacterController.ChangeFacialExpression("Angry");
         }
-        else if (pointer == 45 && choice.currentDate == 2)
+        else if (pointer == 44 && choice.currentDate == 2)
         {
             Debug.Log("End of date 3 FadeFromBlack test");
             sceneLoader.LoadSceneByName("FinalCreditsScene");
